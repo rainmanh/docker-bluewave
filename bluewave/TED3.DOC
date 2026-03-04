@@ -1,0 +1,510 @@
+           ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+           ³                                                  ³
+           ³                Tiny EDitor - TED                 ³
+           ³                                                  ³
+           ³                   Version 3.0                    ³
+           ³                    March 1991                    ³
+           ³                                                  ³
+           ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+    TED is a compact, full screen text editor for creating small DOS
+    text files (< 64K byte) on IBM-compatible PCs.
+
+TED3.ZIP/Binary
+
+    Title   : TED 3.0 - Enhanced version of T. Kihlken's Tiny EDitor 
+    Keywords: TED EDIT FULL SCREEN EDITOR ASCII TEXT UTILITY 
+
+    TED 3.0 adds WordStar compatibility to TED and numerous new commands, 
+    such as search and replace, goto line number, shell to DOS, support 
+    for colors, move cursor left/right one word, delete word, save block 
+    to file, retrieve file, enhanced help and status info, optional display 
+    of tabs and EOLs, etc.  TED3.ZIP contains TED3.COM and TED3.DOC.
+
+				CHANGE HISTORY
+
+  1.0/1.1   15 Nov 88	Orig and corrected version of TED by Tom Kihlken.
+			Reference PC Magazine, Vol. 7, No. 19, 15 Nov 88.
+  2.0	     6 Aug 89	Enhanced version by James Galbraith [73500,2077]
+			adding search, revised EOF & CRLF handling, and help.
+  3.0        2 Mar 91	Enhanced version by David King [72421,2215] adding
+			WordStar compatibility, color support, new commands
+			assigned to shift + and ctrl + function keys, etc.
+
+                             TED 3.0 USER'S GUIDE
+  INTRODUCTION
+
+  TED is a compact, full screen ASCII text editor for IBM compatibles.  It 
+  is intended for creating small (<64K byte) DOS text files, such as files 
+  containing batch commands, source code, or printer escape sequences.
+    
+  TED's features include:
+
+    - Fast, full screen text editing with extensive cursor control.
+    - Simple to use.  Provides on-line help and shift-sensitive function
+      key menus.  Supports both function keys and WordStar commands.
+    - Support for monochrome or color display adapters (in character mode)
+      and screen sizes greater than 80x25.
+    - Copying, deleting, or moving lines or blocks of texts.
+    - Search and replace commands.
+    - Undo capability.
+    - Entry and display of all ctrl codes and full IBM character set.
+    - Retrieving text from or writing blocks of text to other files.
+    - Temporary return to DOS.
+    - Small program file size (approximately 12K bytes).
+   
+  System Requirements:  TED runs on IBM-compatible machines (PC,XT,AT) 
+  under DOS 2.0 or later.  It operates in text mode with MDA, Hercules, 
+  CGA, EGA, or VGA display adapters.  It requires at least one disk drive
+  (floppy or hard) and 150K bytes of free RAM.  
+
+  Limitations:  TED is not intended for editing large files or for 
+  sophisticated wordprocessing.  File and buffer sizes are limited to 64K 
+  bytes.  Line length is limited to 256 characters.  Tabs are fixed at 
+  8 column intervals.  TED does not support word wrap.
+
+			           USAGE
+  To start TED:
+
+	TED
+	TED FILENAME.EXT
+
+  To exit TED (saving changes) or quit (without saving changes):
+
+	Press F7 (EXIT)  or  F3 (QUIT/ABORT).
+
+  Function key commands (F1-F10, Shift + F1-F10, Ctrl + F1-F10) are shown on
+  the menu at bottom of the screen.  The menu changes depending on whether 
+  the shift or ctrl key is depressed.  Most WordStar non-document (N) mode 
+  control-key commands are supported as alternatives to the function keys.
+  Help is available with the F1 key.  When you exit TED and save the file 
+  being edited (F7), TED will prompt for the file name (or confirmation) if 
+  the file has been modified.  File and buffer sizes are limited to 64K bytes.
+
+  		       SUMMARY OF COMMANDS (Function Keys)
+                                             
+ ÚÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿ 
+ ³ KEY ³        FKey          ³      SHIFT + FKey      ³     CTRL + FKey      ³ 
+ ÃÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ 
+ ³ F1  ³ Help (^J)            ³ Setup Options          ³ Display Status Line  ³ 
+ ³ F2  ³ Find Forward (^QF)   ³ Find Next (^L)         ³ Replace (^QR)        ³ 
+ ÃÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ 
+ ³ F3  ³ Quit [Abort] (^KQ)   ³                        ³ Replace Next (^L)    ³ 
+ ³ F4  ³ Mark/UnMark [Toggle] ³ Change Case Marked     ³ Show Tabs & EOL      ³ 
+ ÃÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ 
+ ³ F5  ³ Cut Marked to PB     ³ Copy Marked to PB      ³ Duplicate Char       ³ 
+ ³ F6  ³ Paste [Buffer=PB]    ³ Insert Character Code  ³ Insert Ctrl Char     ³ 
+ ÃÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ 
+ ³ F7  ³ Save & Exit (^KX)    ³ Print Marked on LPT1   ³ Eject Page from LPT1 ³ 
+ ³ F8  ³ Delete Line (^Y)     ³ Delete to EOL (^QY)    ³ Delete Word (^T)     ³ 
+ ÃÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´ 
+ ³ F9  ³ Undelete Line        ³ Undel Chars/Words (^U) ³ GoTo Line (^QI)      ³ 
+ ³ F10 ³ Write PB to File     ³ Read File into PB      ³ GoTo DOS [Exec]      ³ 
+ ÀÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ 
+                                                                                
+            Note:  WordStar-compatible commands shown in parenthesis.
+
+                         SUMMARY OF COMMANDS (Continued)
+
+  Keypad			WS		Function
+
+  Up/Down/Left/Right Arrow  	^E/^X/^S/^D	Move cursor up/down/left/right
+  Ctrl-Left/Right Arrow		^A/^F		Move cursor left/right
+						  one word
+  PgUp/PgDn			^R/^C		Move cursor up/down one screen
+  Ctrl-PgUp/PgDn		^QR/^QC		Move cursor to TOF/EOF
+  Home/End			^QS/^QD		Move to start/end of line
+  Ctrl-Home/End					Scroll screen left/right
+						  8 columns
+  				^W/^Z		Scroll screen up/down one line
+
+  Del/Backspace			^G/^H		Delete char at/left of cursor
+  Ins				^V		Toggle Insert/Overstrike mode
+  				^KW		Write a selected (marked) 
+						  block of text out to a file
+				^KR		Read a file into the text
+						  buffer
+				^B		Strip high bit from chars in
+						  marked block of text
+				^N		Split line [insert new line]
+
+ 				 REFERENCE 
+  CURSOR KEYS
+
+  Cursor keys are located on the numeric keypad (and also on separate cursor 
+  keypads on enhanced keyboards).  (Note: The Num Lock key must be released 
+  to use the keypad keys on keyboards without a separate keypad.)  Cursor 
+  commands are also available using the WordStar (WS) diamond of control-key 
+  commands.
+
+  Keypad    WS    Function
+
+  Up        ^E    Moves the cursor up one row.  If the cursor is at the 
+                  top of the screen, the display is scrolled down.
+  Down      ^X    Moves the cursor down one row.  If the cursor is at the
+                  bottom of the screen, the display is scrolled up.
+  Left      ^S    Moves the cursor left one character.
+  Right     ^D    Moves the cursor right one character.
+
+  PgUp      ^R    Moves the cursor down one screen.
+  PgDn      ^C    Moves the cursor up one screen.  
+
+  Home      ^QS   Moves the cursor to the start of the current line.
+  End       ^QD   Moves the cursor to the end of the current line.
+
+  Ctrl-Left  ^A   Moves the cursor left to the first letter of the previous 
+		  word.
+  Ctrl-Right ^F   Moves the cursor right to the first letter of the next word.
+
+  Ctrl-PgUp  ^QR  Moves the cursor to the top of the file.
+  Ctrl-PgDn  ^QC  Moves the cursor to the end of the file.
+
+  Ctrl-Home   	  Scrolls the screen right eight columns.  
+		  Use to see portion of line which extends off screen.
+		  Note:  An inverse diamond in the last column of a row 
+		  indicates that the line extends off screen.
+  Ctrl-End    	  Scrolls the screen left eight columns.  
+
+             ^W   Scrolls the screen up one row.  If the cursor is at the
+		  bottom of the screen, the cursor gets push up one row.
+             ^Z   Scrolls the screen down one row.  If the cursor is at the
+		  top of the screen, the cursor gets push down one row.
+
+  SPECIAL EDITING KEYS
+
+  In addition to the cursor keys, the following keys are reserved for special 
+  editing functions:
+
+  BS      Erases the character to the left of the cursor.  If the cursor is
+          at the start of a line, the line is joined with the previous line.
+
+  Del     Deletes the character at the cursor position.  If the cursor is at
+          the end of a line, the line is joined with the following line.
+
+  <CR>    Inserts a new line in the file.  The cursor is moved to the start 
+          of the new line.  Any characters which were to the right of the 
+          cursor are moved to the new line.
+
+  Ins     Toggles between insert (I) and overstrike (O) modes.  The current 
+          mode is displayed as an I or O at the end of unshifted function
+	  key menu at the bottom of the screen.  
+
+  Tab     Inserts a tab character (ASCII 9) into file and advances the 
+          screen cursor to the next tab position.  Tabs are fixed at
+          eight column intervals; i.e., column 9, 17, 25, etc.  Tabs are
+          expanded as spaces when displayed or printed.  Tabs can be 
+          displayed on screen by use of the CF4 (Show Tabs & EOLs) command.
+
+  FUNCTION KEYS
+
+  Most editing functions are accessed with the function keys, F1-F10,
+  Shift F1-F10, and Ctrl + F1-F10, designated F#, SF#, and CF# below.  
+  The function key assignments are displayed on a menu line at the bottom
+  of the screen.  The menu changes depending on whether the Shift or Ctrl
+  key is depressed.  Most function keys have WordStar-compatible ctrl-key 
+  equivalents (shown in parenthesis below).
+
+  F1 	Help (^J) - Displays help consisting of tables of function key 
+	assignments, other editing commands, and ASCII/IBM character set.  
+	Use PgUp and PgDn to view; any other key resumes editing.
+  SF1   Setup Options - Allows modifying TED parameters.  Currently, 
+        supports only turning on/off creation of .BAK file.  Other setup 
+        parameters, such as colors, can be modified thru the TED environment 
+	string (see note #1 below).
+  CF1   Display Status Line - Shows line (L) and column (C) number of the 
+	cursor position, displayable char and hex code for the char at 
+	cursor, total number of lines (#L) and bytes (#B) in the buffer, 
+	and the file name (F); e.g.,
+
+               L=259  C=67  (a-61h)  #L=538  #B=27506  F=TEST.TXT
+  
+        The status line is displayed above the menu line at the bottom of
+        the screen and obscures the last line of text until it automatically
+	disappears when the next key is struck.  If the current line (cursor) 
+	would be hidden by status line, the screen is shifted up one line. 
+
+  F2	Find Forward (^QF) - Prompts for a search string (60 chars max)
+	and searches the buffer forward from the cursor position for the 
+	next occurrence of the string.  Case sensitivity works like in 
+        WordPerfect searches - uppercase chars in search string will match 
+        only uppercase, while lowercase chars will match both lower and 
+        uppercase chars.  There is no option in TED to search backwards
+	towards the top of file.
+  SF2	Find Next (^L) - Searches forward for the next occurrence of the
+	current search string.
+  CF2	Find & Replace (^QA) - Prompts for a search string and a replace 
+	string and then searches for next occurrence of search string and '
+	replaces it (after confirmation) with the replace string.  To confirm
+	replacement, press R, Y, or <Enter>.  To skip replacement, press
+	S, N, or '.  This command will automatically continue searching for 
+	the next occurrence until the command is exited via the <Esc> key.  
+        To automatically replace all occurrences of the search string from
+	the current cursor position to the end of the file without 
+	confirmation, press A.  To replace all occurrences of a string in 
+	a file (i.e., global replace), reposition the cursor to the 
+	beginning of the file (ctrl-PgUp) before invoking the replace 
+	command with the A option.
+
+  F3	Quit [Abort] (^KQ) - Abort without saving edited text.  Command
+	prompts for confirmation that you want to abandon changes if the
+	file was modified during the current editing session.
+  SF3	Unused.
+  CF3	Replace Next (^L) - Resumes the Find and Replace command starting
+	at the current cursor position and using last settings of the
+	search and replace strings (CF2).  (Note: ^L functions as a CF2
+	or CF3 depending on whether a find (F2) or replace (CF2) was
+	more recent.)
+
+  F4	Mark/Unmark [Toggle] - Turns on/off text selection.  Use the 
+	cursor commands to expand the marked block of text (displayed
+	with highlight).  Marked blocks are used with cut, copy, change
+	case, print, write file commands.  Deselect text by pressing F4
+	a second time.  (Note: The paste, read file, and insert file 
+	commands also leave the text they insert highlighted.  Unlike 
+	marked blocks, the highlights left by these commands are
+	automatically removed by any subsequent keystroke.  The	inserted 
+	text is highlighted by these commands simply to show the user
+	where the text was inserted and to permit the user to undo the
+	command (by immediately cutting the highlighted text) if needed.)
+  SF4	Change Case Marked - Changes case of marked block to all uppercase
+	or all lowercase.  If the block is not marked, the entire file will 
+	be converted.  The original text is copied to the paste buffer to 
+	permit restoration if needed.  To undo a case change, exit the
+	change case function, delete the altered lines with the F8 key,
+	and then restore the original lines with the paste (F6) function.
+  CF4	Show Tabs & EOLs [Toggle] - Turns on screen display of Tabs and
+	EOLs (CRLFs).  Tabs are displayed as right pointing triangles and
+	CRLFs are displayed as left pointing triangles.  Useful for
+	editing text which is formatted using Tab chars; e.g., .ASM files.
+
+  F5	Cut Marked to PB - Moves the selected text to the paste buffer (PB).
+	You must mark (F4) the block of text to be cut before using the
+	cut command.  After cutting text (F5), you may paste it (F6) as many
+	times as you like or write it out to a separate file (F10).
+  SF5	Copy Marked to PB - Copies selected text to paste buffer.  Same 
+	as Cut (F5) except that the selected text is not removed from the 
+	edit/file buffer.
+  CF5	Duplicate Char - Duplicates character at cursor position.  Useful
+	for duplicating characters which don't have corresponding keys on
+	the keyboard; e.g., line drawing characters.
+
+  F6	Paste - Inserts the contents of the paste buffer into the edit
+	buffer at the cursor position.  The inserted text appears highlighted 
+	on the screen and can be undone by immediately pressing F5 (Cut).  
+	Any other key will turn off the highlight.  Use the Mark and Cut 
+	commands or Read File into PB to fill the PB before using the Paste
+	command.  The contents of the PB remain until overwritten by the 
+	next Cut, Copy, Change Case, Read File into PB, or ^KR commands.
+	Therefore the Paste command can be used repeatedly to insert the 
+	same text if needed.  
+  SF6	Insert Character Code - Prompts for the ASCII code for a single 
+	char to be inserted in file.  Code may be entered in decimal (0-255) 
+	or in hex (0h-FFh).  Hex inputs must be terminated with an "H" or "h".
+  CF6	Insert Ctrl Code - Allows a ctrl code to be entered into the file.
+	Press CF6 followed by single ctrl key combination.  For example,
+        to insert page breaks (form feeds) into the file at the current 
+        cursor position, depress the Ctrl key and hit F6 followed by L
+        (i.e., Ctrl-F6, Ctrl-L).  (Note:  This function works by disabling 
+	TED's normal WS ctrl-key processing for the next key.)
+
+  F7	Save & Exit (^KX) - If file has been modified, prompts for name
+	of file (or confirmation) for text to be saved in, writes the file,
+	and exits TED.
+  SF7	Print Marked on LPT1 - Prints marked text on printer LPT1.  If
+	no block is marked, the entire file is printed.  Print can be
+	aborted by pressing the <Esc> key.  When done, Print leaves the block
+	marked to permit additional copies to be made or the marked block  
+	to be adjusted.  You must press F4 to unmark the block.
+  CF7	Eject Page from LPT1 - Sends form feed to printer LPT1.
+
+  F8	Delete Line (^Y) - Deletes the line the cursor is on.  The line
+	is saved in a one-line undo buffer and can be restored with 
+	the undelete line function (F9).  The F8 and F9 keys can be used
+	in concert to duplicate a line (press F8, F9, F9).
+  SF8	Delete to EOL (^QY) - Deletes text from the current cursor position
+	to the end of the current line.  Deleted text is saved in the
+	line undo buffer.
+  CF8	Delete Word (^T) - Deletes characters from current cursor position 
+	up to start of next word (i.e., remainder of current word plus any
+	intervening blanks leading up to first character in next word).
+	Deleted words are saved in a 256 byte undo buffer and can be
+	restored with the Undel Chars/Words (SF9, ^U) command.
+
+  F9	Undelete Line - Copies contents of line buffer to the file buffer.  
+	Used in conjunction with delete line (F8) command.
+  SF9	Undel Chars/Words (^U) - Restores characters or words which were
+	deleted with Del (^G) or Delete Word (^T) commands immediately
+	preceding the Undel Chars/Words command.  Any other intervening
+	commands will clear the contents of the undo buffer.  Characters
+	deleted with BS key are not saved in undo buffer.
+  CF9	GoTo Line (^QI) - Moves cursor to a specified line number.  The 
+	current line number can be determined by CF1 (Status) key.
+
+  F10	Write PB to File - Writes the contents of the paste buffer to a
+	file.  Prompts for the file name.  Use Mark and Cut to place 
+	desired text into paste buffer before using this command.
+	Use for extracting a section of a file and saving it in a separate
+	file or for saving the current version of an edited file without
+	exiting the editor.  (Note: The ^KS function is similar except that 
+	it combines the paste and write file function in a single command.)
+  SF10	Read File into PB - Reads a file (<64K) into the paste buffer.  
+	You can then use the paste function to insert the text in the file 
+        being edited.  (Note:  The ^KR function is similar to this command 
+	except that it also automatically pastes the retrieved file from 
+	the paste buffer into the edit buffer.)
+  CF10	GoTo DOS [Exec] - Suspends an editing session to allow execution
+	of DOS commands.  To return to the editing session, type EXIT at
+	the DOS prompt.  This function is useful for examining a directory 
+	or file, resizing the screen, or running another program from the 
+	command processor level.
+
+  NOTES
+
+  1.  You may setup TED parameters in an environment string.  The string
+      has 14 characters and a fixed format as shown below.  Characters 5-10 
+      set the three text colors used by TED (normal, inverse, and search).  
+      For example, 
+  
+	      SET TED=30MN1F703E0104
+  
+      where  Char 1-2   = 30   (version ID)
+     	     Char 3     = M (Modify File) or V (View File Only) 
+			  (Note: View only mode not implemented - use M.)
+	     Char 4     = N (No Backup) or B (Create .BAK file)
+	     Char 5-6   = Normal text color in hex (00-FF)
+	     Char 7-8   = Inverse/highlight color in hex (00-FF)
+	     Char 9-10  = Search/found color in hex (00-FF)
+	     Char 11-12 = Keyboard delay (00-03=250-1000 ms, FF=don't
+			  alter system KB delay and repeat rate 
+	     Char 13-14 = Keyboard repeat rate (00-1F) lower val=faster
+
+      and color = text attribute in hex.  Note that the 8-bit text attribute
+      is structured as follows:  XBBBFFFFb where X=1 (blink), BBBb=background 
+      color (0-7), FFFFb=foreground color (0-F); e.g., 00011111b = 1F = Bright
+      white text on blue background.
+  
+             0 - Black			8 - Gray
+             1 - Blue			9 - Bright Blue
+             2 - Green			A - Bright Green
+             3 - Cyan			B - Bright Cyan
+             4 - Red			C - Bright Red
+             5 - Magenta		D - Bright Magenta
+             6 - Yellow/Brown		E - Bright Yellow
+             7 - White			F - Bright White
+
+      In the above example, TED 3.0 is setup to be in modify (M) mode
+      with No (N) .BAK file created.  The colors are:
+
+	Normal	- Bright white text on blue background (1F)
+	Inverse	- Black text on white background (70)
+	Search	- Bright yellow on cyan background (3E).  
+
+      The keyboard typematic settings are 500 ms delay and 20 cps repeat rate.
+
+      Keyboard delay and repeat rates can only be set with enhanced (AT) 
+      keyboards.  If your machine is AT-compatible, you may wish to
+      increase the keyboard repeat rate to make horizontal cursor movements
+      more responsive (i.e., when holding the left or right arrow keys down). 
+      Keyboard rate can be set by using an external speedup utility before
+      invoking TED or by setting the TED environment string.  See note 4 
+      below for related information.
+
+      If no environment string is specified, TED will use default settings
+      equivalent to SET TED=30MN1F703EFF04; i.e., same colors, etc.
+      as in above example except that keyboard delay and repeat rates are
+      left unchanged from the system setting.  If you wish to change TED's 
+      default settings (e.g., colors), place a SET TED= statement in your
+      AUTOEXEC.BAT file or in a separate batch file (EDIT.BAT) like the
+      following:
+
+		@ECHO OFF
+		SET TED=30mn1e303f0104          (yellow on cyan)
+		TED3 %1
+
+      Others:	set ted=30mn0770f0ff04          (monochrome)
+
+  2.  The preferred way of entering special character codes in TED is to use 
+      the SF6 (enter char code) or CF6 (enter ctrl char) functions.  Char 
+      codes can also be entered by holding the Alt key down and typing the 
+      ASCII code (in decimal) on the numeric keypad and then releasing the 
+      Alt key.  You cannot use this feature to enter control chars since 
+      codes <32 are interpreted by TED 3.0 as WordStar commands.  
+
+  3.  A diamond at the right edge of the screen indicates the line extends
+      off screen.  Press Ctrl-End to shift the visible portion of the lines 
+      to the left.  
+
+      Note:  TED is designed to work with displays greater than 80x25.  TED
+      senses the display size when the program is started or whenever you
+      resume editing after a CF10 command.  If your display system supports 
+      text screens wider than 80 characters, you can dynamically resize the
+      screen by using the GoTo DOS command (CF10) to exit to DOS, resize the
+      display with the appropriate utility, and then resume editing (type 
+      EXIT at DOS prompt) with the wider screen.  TED's screen resizing
+      capability works well with Personic's UltraVision screen enhancer 
+      utility which enables text displays up to 132x60 on VGA and compatible 
+      EGA systems (ref. CIS:PCVENB).
+
+  4.  TED writes directly to the screen.  If you scroll up or down (by keeping
+      the up or down arrow key depressed) at a rate too fast for your system 
+      to simultaneously process the keystrokes and the display, the display 
+      may lag.  The display will catch up when you release the up or down
+      arrow (or ^Z, ^W) keys.  This effect is more likely to be seen on slow 
+      machines with fast keyboard repeat rates or when using larger screen 
+      sizes (more than 25 rows or 80 columns).  The effect can be eliminated 
+      by reducing the keyboard repeat rate.
+
+  5.  Lines are delimited with the CR-LF sequence.  Note that CR-LF pairs
+      are treated as a single character by TED.  Pressing the Enter key
+      will insert a CR-LF in the file; deleting an EOL will delete a CR-LF
+      pair.  An adjacent CR and LF cannot be separated.
+
+  6.  TED does not place a CP/M-style EOF character (1Ah, ctrl-Z) at the end
+      of the file when a file is saved.  TED strips off any ctrl-Z characters
+      from the end of a file when it reads a file.  If you need to terminate
+      a file with an EOF character, position cursor at the end of the file 
+      (ctrl-PgDn) and use the SF6 or CF6 command to enter the EOF code.
+
+  7.  Under Windows or DESQview, run TED in full screen windows.
+
+  8.  TED is written in assembly language (MASM).
+
+  ERROR MESSAGES
+
+  1. Error - File too big (>64K)
+     Files and buffers in TED are limited to 64K bytes.
+  2. Error - File read error
+  3. Error - Not enough memory 
+     TED needs approximately 150K of free RAM.
+  4. Error - Bad environment variable (SET TED=)
+     Check format of TED environment string (see Note 1 above).
+
+				   GALLERY
+
+  1. The following example contains the line drawing characters for a box.
+     Copy the following lines into a separate file by marking the box (F4)
+     and saving the marked lines in a separate file (ctrl-KS).  Then you 
+     can retrieve the file (ctrl-KR) and edit it whenever a box is needed.
+
+    ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³                                                                       ³
+    ³                                                                       ³
+    ³                                                                       ³
+    ³                                                                       ³
+    ³                                                                       ³
+    ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+   2. The following example contains the line drawing characters for a
+      multicolumn table.  Copy the following lines into a separate file and
+      then retrieve the file and edit it whenever a form for a multicolumn
+      table is needed.
+
+    ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+    ³                       ³                       ³                       ³
+    ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+    ³                       ³                       ³                       ³
+    ³                       ³                       ³                       ³
+    ³                       ³                       ³                       ³
+    ³                       ³                       ³                       ³
+    ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+<<< End of File >>>

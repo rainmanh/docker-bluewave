@@ -1,0 +1,2457 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       The Blue Wave Offline Mail Reader, Version 2.30
+       Copyright (C) 1992-1996 by Cutting Edge Computing
+       All Rights Reserved
+
+       Configuration and Reference Manual
+       Written by George Hatchew
+       Portions by Martin Pollard
+
+       Cutting Edge Computing
+       P.O. Box 90476
+       Burton, Michigan  49509-0476
+       USA
+
+       BBS Support Number:  810-743-8464
+       FAX Support Number:  810-743-5910 (REGISTERED users only)
+       Voice Tech Support:  810-743-9283 (REGISTERED users only)
+
+       Internet E-Mail   :  bluewave@concentric.net
+       World Wide Web    :  http://www.concentric.net/~bluewave
+
+
+                                 -----------------
+                                 TABLE OF CONTENTS
+                                 -----------------
+       Chapter 1
+           ABOUT THIS DOCUMENTATION                               4
+       Section 1.1  Purpose of this Documentation                 4
+       Section 1.2  Printing this Documentation                   5
+       Chapter 2
+           LICENSING AND DISTRIBUTION                             6
+       Section 2.1  Software License Agreement                    6
+       Section 2.2  Purchasing a License                          7
+       Section 2.3  Corporate and Governmental Purchase Orders    8
+       Section 2.4  What You Receive When You Order               8
+       Section 2.5  Registered User License                       9
+       Section 2.6  Trademarks and Credits                        9
+       Chapter 3
+           ABOUT THE BLUE WAVE READER                            10
+       Section 3.1  History of Offline Mail Systems              10
+       Section 3.2  What Are E-Mail Networks For?                12
+       Section 3.3  What Will Blue Wave Do For Me?               12
+       Section 3.4  What Features are in Blue Wave?              13
+       Chapter 4
+           HARDWARE AND SOFTWARE REQUIREMENTS                    14
+       Section 4.1  Different Blue Wave Versions                 14
+       Section 4.2  Requirements for Blue Wave/DOS               14
+       Section 4.3  Requirements for Blue Wave/386               15
+       Section 4.4  Requirements for Blue Wave/OS2               15
+       Section 4.5  Locating Other Blue Wave Versions            16
+       Section 4.6  Required External Programs                   17
+       Chapter 5
+           OVERVIEW OF USING THE MAIL SYSTEM                     18
+       Section 5.1  Downloading and Reading Mail Packets         18
+       Section 5.2  Creating and Uploading Reply Packets         19
+       Chapter 6
+           CONFIGURING THE MAIL READER                           21
+       Section 6.1  MS-DOS CONFIG.SYS Settings                   21
+       Section 6.2  Creating a Blue Wave Icon Under Windows      21
+       Section 6.3  Creating a Blue Wave Icon Under OS/2         23
+       Section 6.4  Configuring and Installing External Programs 24
+       Section 6.4.1  The PATH Environment Variable              25
+       Section 6.5  Configuring External Archivers               26
+       Section 6.5.1  Notes About Archiver Command Lines         27
+       Section 6.6  Message Editor Command Line                  27
+       Section 6.7  Spell Checker Command Line                   28
+       Section 6.8  Terminal/Comm Command Line                   28
+       Section 6.9  Editor/Browser Command Line                  29
+       Section 6.10  External Tagline Manager Command Line       29
+       Chapter 7
+           FILES CREATED, USED, & MAINTAINED BY BLUE WAVE        31
+       Section 7.1  List of Files and their Purpose              31
+       Section 7.2  Creating Keyword Search Files                33
+       Section 7.3  Creating Tagline Files                       34
+
+
+
+                 -------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 2
+
+       Chapter 8
+           COMMONLY ASKED QUESTIONS AND ANSWERS                  36
+       Chapter 9
+           ADVANCED CONFIGURATION ITEMS                          38
+       Section 9.1  DOS Mail Reader                              38
+       Section 9.2  386 Mail Reader                              38
+       Section 9.3  OS/2 Mail Reader                             39
+       Chapter 10
+           KNOWN PROBLEMS AND INCOMPATIBILITIES                  40
+       Section 10.1  DOS Reader                                  40
+       Section 10.2  386 Reader                                  40
+       Section 10.3  OS/2 Reader                                 40
+       Chapter 11
+           SOFTWARE SUPPORT INFORMATION                          42
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 -------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 3
+
+                                         ------------------------------------
+                                         Chapter 1:  ABOUT THIS DOCUMENTATION
+                                         ------------------------------------
+
+
+       Section 1.1  Purpose of this Documentation
+
+       The documentation presented in this file is designed to:
+
+       * Provide an overview of the operation of The Blue Wave Offline Mail
+         Reader, and the concept of offline mail readers in general.
+
+       * Provide users of The Blue Wave Offline Mail Reader tips on getting
+         the best performance out of the mail reader.
+
+       * Provide trouble-shooting information and solutions to the most
+         commonly asked questions regarding the use of the mail reader.
+
+       * Provide documentation on the creation of keyword search files,
+         tagline files, and an overview of the Preferences System used in
+         the mail reader.
+
+       * Provide information about the minimal system hardware configuration
+         that is required to use the mail reader.
+
+       * Provide details about the external programs which are required for
+         proper usage of the mail reader, including the configuration of
+         these external programs.
+
+       The documentation in this file is not meant as a complete reference to
+       every function  and option  available in  the mail reader.  Describing
+       every one  of these  options here would take volumes of documentation.
+       The mail  reader provides  an extensive  amount of  information in its
+       online context-sensitive help system.  At any point in the mail reader
+       you can  press the  <F1> key for immediate on-screen help.  The online
+       help system provides the documentation at your finger tips.
+
+       If at  any time  you need  help while  using the  mail reader,  always
+       remember that  documentation is  only an  <F1> key  press away.    The
+       online help  system provides 'hot links' to related help topics, and a
+       help topic index to allow you to find items of interest.  In addition,
+       each error  message and condition that is generated by the mail reader
+       is covered  by an  online help  category.   If you  receive  an  error
+       message or  condition while using the mail reader, and you do not know
+       the cause  of the problem, the help system will most likely be able to
+       give you specific information about the cause and how you can go about
+       fixing it.
+
+       This documentation  provides a Table of Contents; use this to help you
+       locate items  of interest in this file, or use a file viewer/editor to
+       search for items you may be looking for.
+
+       Instructions for  printing this documentation file can be found in the
+       following section.
+
+
+                 -------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 4
+
+       Section 1.2  Printing this Documentation
+
+       This documentation  is formatted  with Form  Feeds for printing on all
+       Personal Computer  printers.   This documentation file contains no IBM
+       Extended ASCII  characters, so  it should  print fine  on all  printer
+       models - even non IBM ProPrinter compatibles.
+
+       To print this documentation in hard copy, simply execute the following
+       command from the DOS (or OS/2) command line:
+
+            COPY BWAVE.DOC PRN
+
+       If you  would like  to print  this documentation  using the  PRINT.COM
+       print spooler  provided with most versions of DOS, simply execute this
+       command at the DOS prompt:
+
+            PRINT BWAVE.DOC
+
+       OS/2 users  note that  PRINT.COM is  not necessary under OS/2, as OS/2
+       has an  internal print  spooler.   Simply type "COPY BWAVE.DOC PRN" if
+       you are an OS/2 user.
+
+       The documentation  is formatted  to 60 lines per page so that printing
+       on laser  printers should  also work  with no  problems.  If, when you
+       attempt to  print this  documentation, your  printer  begins  ejecting
+       pages which  are not complete (the page number is not at the bottom of
+       the page),  you should cancel the print job and configure your printer
+       to accept  at least  60 lines per page.  You will need to consult your
+       printer's user manual for information on how this can be done.
+
+       The documentation was written by George Hatchew and is Copyright (C)
+       1992-1996 by Cutting Edge Computing.  It may be distributed freely, so
+       long as  it is kept together with the entire set of mail reader files.
+       Please read the section titled "Software License Agreement".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 -------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 5
+
+                                       --------------------------------------
+                                       Chapter 2:  LICENSING AND DISTRIBUTION
+                                       --------------------------------------
+
+
+       Section 2.1  Software License Agreement
+
+       Cutting Edge  Computing has  taken every  precaution to ensure that no
+       harm or  damage will  occur to  systems running  The Blue Wave Offline
+       Mail Reader.   However,  we cannot  be responsible  for any damages or
+       other losses  sustained as  a result  of running this software on your
+       system.   The user  assumes full  responsibility for the proper use of
+       this mail  system, whether  damage occurs as a fault of operator error
+       or software error.  NO WARRANTIES ARE IMPLIED OR EXPRESSLY STATED.
+
+       The Blue  Wave Mail  System and  this  documentation  are  copyrighted
+       materials of  Cutting Edge Computing and George Hatchew.  Cutting Edge
+       Computing reserves  all rights  to these  materials, and  is protected
+       under United  States and  International Copyright  laws.   No part  of
+       these materials  may be  reproduced or modified in any way without the
+       prior express written permission of Cutting Edge Computing.
+
+       Use of The Blue Wave Offline Mail Reader constitutes acceptance of the
+       stated terms  and conditions.   Cutting  Edge Computing  reserves  all
+       rights which are not expressly granted.
+
+       The Blue  Wave Offline  Mail Reader  is fully copyrighted, and is not,
+       nor will it ever be, in the Public Domain.  The Blue Wave Offline Mail
+       Reader is  NOT FreeWare.   It  is distributed  and marketed  under the
+       concept of  ShareWare.   Users are  allowed to try this program for 30
+       days before  paying for  and registering  the mail system with Cutting
+       Edge Computing.   In this 30 days, you may use the program to its full
+       capacity.   If the  software does  not meet your needs, and you do not
+       plan on  purchasing and  registering this  software with  Cutting Edge
+       Computing after  your 30  day trial  period, you are to cease usage of
+       the mail  system.   Continued use  beyond  the  authorized  evaluation
+       period is  a violation  of copyright  law unless  you have  payed  the
+       registration fee in full.
+
+       Cutting Edge  Computing  grants  an  unlimited  license  to  make  and
+       distribute UNREGISTERED  copies of  The Blue  Wave Offline Mail Reader
+       which have  been released  to the  public by  Cutting Edge  Computing.
+       Absolutely no  modifications to  the files  contained in  the software
+       package,  including  this  documentation  file,  may  be  made  before
+       distribution.  No fee may be charged by anyone other than Cutting Edge
+       Computing beyond the actual cost of providing these copies without the
+       prior written consent of Cutting Edge Computing.
+
+       Distribution on CD-ROM, BBS systems, and other media is encouraged, so
+       long as the purchaser of the CD-ROM (and other media) or downloader of
+       the software  is aware  that they  must also purchase a LICENSE to use
+       this software.   The  purchase price  of the media or any subscription
+       costs to an online service do not pay for this license.
+
+
+
+                 -------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 6
+
+       Section 2.2  Purchasing a License
+
+       There are  several ways  in which  you  can  purchase  a  license  (or
+       register) to  use this  software.   Methods for  registration  include
+       surface mail, FAX registrations by credit card, and online credit card
+       registrations through our support BBS.
+
+       When you  used the  installation program to unpack the mail reader and
+       this documentation  file from  the distribution  archive, you  had the
+       choice of installing "Registration Forms".  The main registration form
+       is called  REGISTER.BW.   This is  a text file which can be printed in
+       the same  manner as  described above  for printing this documentation.
+       Three other  forms are  also included.   REGISTER.AUS  can be  used to
+       register  the   software  if  you  live  in  Australia,  New  Zealand,
+       Singapore, or  any other  nearby country.   Our  registration agent in
+       Australia is  Craig Gibson  (Fidonet address 3:620/252).  REGISTER.EUR
+       can be  used to  register the  software if  you live  in Europe.   Our
+       registration  agent  in  Europe  is  Steve  Stacher  (Fidonet  address
+       2:443/888).   REGISTER.RSA can be used to register the software if you
+       live in the Republic of South Africa or any other nearby country.  Our
+       registration agent in South Africa is Graeme Slogrove (Fidonet address
+       5:7107/4).
+
+       To register  by  surface  mail,  simply  print  the  appropriate  form
+       (REGISTER.AUS for  Australia and  nearby  countries,  REGISTER.EUR  in
+       Europe, REGISTER.RSA in South Africa, and REGISTER.BW elsewhere in the
+       world).   Complete all  of the necessary information and mail the form
+       to the address shown on the form.
+
+       To register  by FAX,  you must  use a  credit card.   We  accept Visa,
+       MasterCard, Discover, American Express, Diner's Club, Optima, and JCB.
+       Complete the  form REGISTER.BW  and FAX  the form  to +1-810-743-5910.
+       Sorry, FAX  orders cannot  be accepted  at the  Australian or European
+       registration agents.
+
+       To register  through our support BBS, use a communications program and
+       your modem  to dial  +1-810-743-8464.   You must  be using  one of our
+       accepted credit  cards (Visa,  MasterCard, Discover, American Express,
+       Diner's Club,  Optima, or JCB).  When you log into the support BBS and
+       reach the  Main Menu, simply type 'R' to load the Registration System.
+       If your credit card authorization request is accepted by the bank, you
+       will immediately be provided a 'temporary' 30-day registration number.
+       After final  approval of  your credit  card order,  you will receive a
+       permanent registration  number via  surface  mail  (approximately  1-2
+       weeks).
+
+       To register  by check  or money order, simply fill out the appropriate
+       registration form  and mail  it to  the address shown.  All checks and
+       money orders  MUST be payable in United States currency, and they MUST
+       be drawn  on a  US  bank.    EuroCheques  and  GiroCheques  cannot  be
+       accepted.   Due to  the fees our bank charges for cashing checks drawn
+       on a  Canadian bank, we must require that you enclose $15.00 US if you
+       pay with  a check  from a  Canadian bank.   We  suggest a Postal Money
+       Order, available from your local post office, instead.  This is a much
+       cheaper alternative.
+
+                 -------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 7
+
+       Section 2.3  Corporate and Governmental Purchase Orders
+
+       Purchase orders  from large corporations and governmental agencies are
+       accepted with  "NET 30"  terms.    Both  site  licenses  and  per-copy
+       licenses are  available.   Please write to Cutting Edge Computing with
+       your requirements and we will submit a bid.  Site license and per-copy
+       discounts apply  when 25  or  more  copies  of  the  mail  reader  are
+       purchased at one time.
+
+       Our mailing address is:
+
+       Cutting Edge Computing
+       P.O. Box 90476
+       Burton, MI  48509-0476  USA
+
+
+
+       Section 2.4  What You Receive When You Order
+
+       When you  purchase a  copy of  The Blue  Wave Offline Mail Reader, you
+       will  receive   a  registration   letter  which  contains  details  on
+       converting your  copy of  the mail  reader into  a registered version.
+       The registration  letter will  assign you  a unique  user registration
+       number based  upon the  name you  supplied  when  you  submitted  your
+       registration form.   To  convert your  copy of  the mail reader into a
+       fully licensed version, you simply need to enter the registration name
+       and number  supplied into the "Setup/Configure Mail Reader" portion of
+       the program.   The  next time  you  load  the  mail  reader,  it  will
+       recognize you as a registered owner of the software.
+
+       In order  to keep registration costs low, we do not automatically ship
+       a disk  containing a  copy of  the software.  Since you already HAVE a
+       copy of  the software,  we can  simply provide you with a registration
+       number to  activate the software license.  If you would like to insure
+       that you  have the  latest version  of the  mail reader, we do offer a
+       disk mailing service for and additional $5.00US.
+
+       Sorry, we currently do not offer a printed manual for the mail reader.
+       With the  online documentation/help system built into the mail reader,
+       we have  found that  most users  do not need or do not want to pay the
+       extra cost of providing a printed manual.
+
+       Please be  sure to  keep the  registration letter you receive from us.
+       You may  need your  registration number  handy in  the case  of a disk
+       failure or  other system  crash.  This registration letter also serves
+       as your official software license.
+
+       If  you   lose  or   otherwise  misplace  your  software  registration
+       certificate, we  can provide  you with  a replacement  copy.  You must
+       send your  request to our mailing address along with a self-addressed,
+       STAMPED envelope.  (Users outside of the United States must enclose an
+       International  Reply   Coupon,  available   at  your   post   office).
+       Replacement registration  codes will  NOT be  given by any other means
+       (FAX, e-mail, or voice technical support).
+
+
+                 -------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 8
+
+       Section 2.5  Registered User License
+
+       Registered users  of The  Blue Wave Offline Mail System are granted an
+       unlimited license to use the product, provided the following:
+
+       *  Registration fees are NOT refundable.
+
+       *  Registration codes are not transferable to other parties.
+
+       *  Unofficial software patches must not be applied, and all copyright
+          notices in the documentation and supporting files are not to be
+          altered.
+
+       *  Backup copies may be kept of all registered versions of this
+          software for archive purposes only.
+
+       *  Use of a registered copy is limited to one machine at a time.  Use
+          of multiple registered copies on multiple machines AT THE SAME TIME
+          requires additional payment to Cutting Edge Computing.
+
+
+
+       Section 2.6  Trademarks and Credits
+
+       Cutting Edge  Computing would like to thank all users of The Blue Wave
+       Offline Mail Reader for their outstanding contributions in the form of
+       new feature  requests, advice,  and word-of-mouth recommendations.  It
+       is users of the mail system that have made it what it is today.
+
+       Cutting Edge Computing would also like the thank all past  and current
+       software testers  for their  tireless and  extensive work in providing
+       problem reports  and  suggestions  during  the  testing  process.    A
+       complete list  of the  people who contributed to the final product can
+       be found  in a file called BETASITE.230, which was installed into your
+       main reader directory.
+
+       Frequently asked  questions and  answers information  was supplied  in
+       part by Don Alt and Jerome Green.
+
+       The following  products are  mentioned throughout  this documentation.
+       They are  products or  trademarks  of  the  companies  or  individuals
+       indicated:
+
+            AMD                 Advanced Micro Devices
+            ARJ                 Robert Jung
+            Boxer               David Hamel, Boxer Software
+            Cyrix               Cyrix Corporation
+            EZQuote             George Hug
+            FidoNet             Tom Jennings, Fido Software
+            IBM OS/2, PC-DOS    International Business Machines Corporation
+            Intel               Intel Corporation
+            MS-DOS, Windows     Microsoft Corporation
+            Novell DOS          Novell Corporation
+            PKZIP/PKUNZIP       PKWARE, Inc.
+            QEdit               SemWare, Inc.
+
+                 -------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 9
+
+
+                                       --------------------------------------
+                                       Chapter 3:  ABOUT THE BLUE WAVE READER
+                                       --------------------------------------
+
+
+       Section 3.1  History of Offline Mail Systems
+
+       Back in  the early  to mid  1980's, many  people were beginning to get
+       home computers and modems.  People began communicating in several ways
+       through Bulletin  Board Systems  (BBS's).   BBS systems began offering
+       message bases where people of similar interests could communicate with
+       each other  through electronic  means.  As the technology grew, people
+       started sharing message bases between different BBS systems across the
+       city, then  across the country, and eventually across the world.  Mail
+       conferencing was born, and nothing was going to stop it.
+
+       At about  the same  time, commercial online services began offering E-
+       Mail services  which could  transmit a  message to a recipient several
+       thousands of  miles away  in a  matter  of  hours,  minutes,  or  even
+       seconds.   In the  early  stages,  however,  these  commercial  online
+       services were  very expensive.  E-Mail on commercial services normally
+       could only  be afforded  by businesses  and a  handful of individuals.
+       Many people became hooked, many others dependant, on E-Mail.
+
+       While the  commercial companies  were developing new, faster, and less
+       expensive ways  to transmit  E-Mail across  the  world,  so  were  the
+       amateur  BBS   operators.     Several  amateur   E-Mail  networks  and
+       technologies were  formed.  One of the largest amateur E-Mail networks
+       still popular today is FidoNet.
+
+       Don't let  the term  'amateur' fool  you.  Many of the people that are
+       responsible for  keeping FidoNet  up and  running may be classified as
+       amateurs, but years of experience and knowledge, and usually thousands
+       of dollars in equipment, have earned them a very respectable name.
+
+       Today, FidoNet  is nearly  20,000 nodes  strong and still growing!  As
+       the networks  and the number of home computer users has grown, the use
+       of technology  for reading  and replying  to E-Mail offline has become
+       more and  more essential.   When BBSing was young, there was plenty of
+       time to  read and  reply to  messages online.   Today, with more users
+       than ever  and more E-Mail flowing than ever, there just is not enough
+       time for  every user to spend a half-hour, and hour, or even two hours
+       online to  their local BBS.  Long distance phone rates can also get to
+       be outrageously  expensive after  just a  few of  these  sessions  per
+       month.
+
+       This is  where offline  mail reading  comes into  play.   With today's
+       innovations in  offline mail processing, you can spend just a very few
+       minutes per  day online to your favorite BBS system and do all of your
+       work OFFLINE,  where there  is no system time limit to run up against,
+       and where the phone company's meter is not running.
+
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 10
+
+       Packing your  mail online,  immediately retrieving  the mail 'packet',
+       and logging off of the host mail system allows many more callers to be
+       able to access the same service; eliminating many 'busy signals'.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 11
+
+       Best of  all, you  can read  your mail  at any time you like.  Today's
+       communications software  allows you  to build  script files,  which in
+       turn allows you to retrieve your mail automatically at even the oddest
+       times of  the day  or night (especially when long distance phone rates
+       are low).  When you are ready to read your mail, all you need to do is
+       fire up your favorite offline mail system, and you are on your way!
+
+
+
+       Section 3.2  What Are E-Mail Networks For?
+
+       At this  point, you  may be  asking yourself, "What exactly are E-Mail
+       Networks for?".   Some people unfamiliar with mail networks and E-Mail
+       sometimes cannot  understand the enjoyment and knowledge that can come
+       out of being an active participant on an E-Mail network.  Not only can
+       you communicate with people from all corners of the world, but you can
+       learn more  about your  favorite computer software, share recipes with
+       others, learn  how to repair your leaking roof, get advice from others
+       on product  quality ratings,  or just  join in  a  chat  between  long
+       distance friends.  As a matter of fact, FidoNet alone offers well over
+       300 E-Mail  topics (sometimes called 'echos' or 'conferences') ranging
+       from Aardvarks to Zymurgy.
+
+       Many businesses  now use  internal E-Mail  networks for communications
+       between employees  just down  the hall,  across town, or even half-way
+       around the  globe.   Many software and computer hardware companies now
+       have a support BBS which allows users to dial in and exchange messages
+       and files  between users.   Technical support is nearly always offered
+       through these types of support systems.
+
+
+
+       Section 3.3  What Will Blue Wave Do For Me?
+
+       The  Blue  Wave  Offline  Mail  Reader  will  allow  you  to  actively
+       participate in this fun, fascinating, and informative world of E-Mail.
+       You may  find that  participating in  E-Mail conferencing  is  just  a
+       hobby, or  you may  find that  it becomes  an essential  part of  your
+       business and personal communications.
+
+       Hobbyists will  find that  the mail  reader will allow you to retrieve
+       mail from your favorite BBS system to your own computer, where you are
+       free to  take your time and enjoy yourself.  You aren't forced against
+       the BBS  system's time  limits or  faced with  a  long  distance  bill
+       approaching the  size of  the national  debt.  You are also doing your
+       part to  allow more  people on  your favorite  BBS system so there are
+       less busy signals, and more productive online sessions.  The Blue Wave
+       Offline Mail  Reader is  a complete  mail manager, which allows you to
+       reply to messages, save messages to disk in text files, print messages
+       to your  printer, and  help you  search out only the messages that you
+       are interested  in through  the use of keyword searching.  But most of
+       all, just to enjoy yourself!
+
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 12
+
+       Section 3.4  What Features are in Blue Wave?
+
+       The Blue  Wave Offline Mail Reader is one of the most powerful offline
+       mail readers available.  It is also one of the easiest mail readers to
+       use and to understand.  Here are some highlights of just a very few of
+       the features available in The Blue Wave Offline Mail Reader.
+
+       *    The Blue Wave Offline Mail Reader for DOS/386 and OS/2 can handle
+            message packets  and individual  messages  of  any  size.    Blue
+            Wave/DOS, while  limited to  640K, is  one of,  if not  the  most
+            memory efficient offline mail reader available for DOS.
+
+       *    The Blue  Wave Readers  can read mail packets from Blue Wave Mail
+            Doors (of  course!),  as  well  as  mail  packets  from  QWK-mail
+            packers.  This makes it a very versatile piece of software.  Blue
+            Wave Mail  Door support  is found  on many  systems connected  to
+            FidoNet.   Since Blue Wave was born on FidoNet, it 'knows' how to
+            make FidoNet  an enjoyable experience, and not another nightmare.
+            Support for  QWK-style mail  packets makes  the  reader  able  to
+            communicate with  other networks such as RIME and Wild!Net.  Many
+            Internet service  providers also  offer a  UQWK mail  packer  for
+            USENET newsgroups, which allows you to connect Blue Wave.
+
+       *    The  Blue   Wave  Mail   Reader  provides   the   most   flexible
+            configuration system ever offered in an offline mail reader.  Not
+            only can  you configure  nearly every aspect of the mail reader's
+            behavior, but  you can  do so  globally, by  individual host mail
+            systems, and  even by  each individual  message area  on  a  host
+            system.  What's more, the mail reader provides this functionality
+            through an easy to use pull-down menu system.
+
+       *    Blue Wave  provides an  easy-to-use offline  configuration system
+            for configuring  both Blue  Wave and  (to a  limited extent) QWK-
+            style mail  packers while  you are  offline.  Because you are not
+            connected to  the host  mail system,  you can  take your  time in
+            choosing the message areas you would like to download.
+
+       *    A very  powerful keyword  searching system  allows you to quickly
+            find messages  of interest  in certain  areas or across an entire
+            mail packet.
+
+       *    A complement  to Blue  Wave's keyword  searching is  its  message
+            filtering capabilities.   You can filter messages from people you
+            do not  care to  hear from,  or filter  subjects that just do not
+            interest you.
+
+       *    A complete,  very detailed online help system is available at any
+            time the mail reader is active by pressing <F1>.  The online help
+            saves you  time and  frustration by  instantly providing you with
+            answers to  questions you have while using the mail reader.  This
+            saves you the trouble of scouring mounds of documentation looking
+            for one  small  tidbit  of  information.    The  help  system  is
+            completely context  sensitive, and  contains hot  links to  other
+            related items with the click of a mouse or the touch of a key.
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 13
+
+                               ----------------------------------------------
+                               Chapter 4:  HARDWARE AND SOFTWARE REQUIREMENTS
+                               ----------------------------------------------
+
+
+       Section 4.1  Different Blue Wave Versions
+
+       The Blue  Wave  Offline  Mail  Reader  v2.30  is  available  in  three
+       different versions.   There  is Blue Wave/DOS, Blue Wave/386, and Blue
+       Wave/OS2.   Each  mail  reader  has  the  same  set  of  features  and
+       operations available.   They  differ only in the operating system they
+       require, and  the amount of data they can handle.  (The amount of data
+       they can  handle is related to the operating system they are being run
+       under).
+
+       The hardware  and  software  requirements  of  each  version  will  be
+       explained in  the following  three sections.    You  should  read  the
+       requirements for  each of  the three  different versions  of the  mail
+       reader to  be sure  that you  use the one that is most appropriate for
+       your system and your needs.
+
+
+       Section 4.2  Requirements for Blue Wave/DOS
+
+       The Blue  Wave Offline  Mail Reader for DOS is by far the most popular
+       version of  the mail  reader.   It can  be  run  on  any  100%  IBM-PC
+       compatible computer  that runs  PC-DOS, MS-DOS,  or Novell DOS version
+       3.0 or  higher.   This includes  DOS emulation  in both  IBM OS/2  and
+       Microsoft Windows.  A minimum 1MB of free disk space is also needed.
+
+       This software  will run  efficiently  on  any  Intel  8088  compatible
+       processor, which  includes the  IBM PC/XT,  IBM PC/AT, any Intel 80286
+       compatible processor, and processors compatible with the 80386, 80486,
+       and the Intel Pentium (such as an AMD or Cyrix processor).
+
+       This version of the mail reader requires at least 300K of free memory,
+       and does not require the use of Expanded or Extended memory.  However,
+       due to  the limitation  of the  DOS operating system, this mail reader
+       cannot make  use of any more than 640K of memory.  This limitations is
+       apparent in all DOS-based programs that operate in 'real' mode.  (Real
+       mode is a technical term that you probably do not have to worry about.
+       It is a term that, if you know what it means, you wish you didn't!).
+
+       Because of  the limitations  of DOS  (the operating  system), the mail
+       reader is constrained to the limit of 640K of base memory.  This means
+       that, even though you may have 8 megabytes of memory in your computer,
+       DOS programs will only 'see' the first 640K.  This puts a limit on the
+       number of  message areas  and the number of messages per area that the
+       reader can  handle.   If you  are running an 80386 processor or higher
+       along with DOS or Windows, you may want to try the version of the mail
+       reader called  "Blue Wave/386".   Blue  Wave/386 can  'see' all of the
+       memory in  your computer  and use  it for  loading  large  numbers  of
+       messages and  message  areas,  in  addition  to  very  large  messages
+       (commonly encountered on the global Internet and USENET networks).
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 14
+
+       Section 4.3  Requirements for Blue Wave/386
+
+       Blue Wave/386  is an extended, or protected mode DOS program.  In very
+       simple terms,  this means that it is capable of utilitizing all memory
+       that is  installed on  your system.  (Please read the previous section
+       for more  information).   In addition to the ability to use all memory
+       in your computer, Blue Wave/386 can also 'simulate' memory through the
+       use of a disk file.  This is sometimes called a 'swap file' or Virtual
+       Memory.
+
+       In order  to run Blue Wave/386 on your system, you must be running DOS
+       4.0 or  higher, OS/2  v2.0 or  higher, or  Windows v3.0 or higher.  In
+       addition, your computer processor must be at least an Intel compatible
+       80386, 80486,  or Pentium.   This  version of  the  mail  reader  also
+       requires more disk space than the rest.  A minimum of 2MB of free disk
+       space (more if a swap file is used) is needed.
+
+       You must  also have  at least  1MB of  free memory  available on  your
+       system.   2MB of free memory is recommended for the fastest operation.
+       Through the  use of  both RAM  and swap  space (Virtual  Memory), Blue
+       Wave/386 can load thousands of message areas, thousands of messages in
+       an area,  and messages that are several megabytes long without batting
+       an eye.   Again, the only limit to Blue Wave/386 is the amount of real
+       memory plus  the amount of disk space you can give it.  It will handle
+       any mail packets you give it now and well into the future.
+
+       For the technical wizards;  Blue Wave/386 will use a DPMI server, XMS,
+       EMS, or  VCPI interface to upper memory.  A DPMI server is recommended
+       (OS/2, Windows, and QEMM provide DPMI services).
+
+       This version  is NOT  recommended if  you are running OS/2.  Protected
+       mode switching  in this mail reader will consume an undesirable amount
+       of processor  time.   OS/2 users  should choose Blue Wave/OS2 as their
+       mail reader.   This version is also NOT recommended for users who rely
+       on the  speech hardware/software interface in Blue Wave/DOS.  Although
+       this version  of the  mail reader does provide a speech-friendly video
+       mode, it  is extremely  slow.  This is due to the fact that writing to
+       the PC-BIOS requires a switch from protected mode to real mode.  Since
+       PC-BIOS compatible  video writes  can only  be done one character at a
+       time, this causes a severe performance penalty.
+
+       Blue Wave/386 utilizes the DOS4GW protected mode runtime loader.  This
+       DOS extender may exhibit some incompatibilities on some hardware.  The
+       author has  one such  machine.   It is  highly  recommended  that  you
+       install and use this version before blindly purchasing a copy as there
+       is a  slight chance  that it  may not work for you.  Sorry, no refunds
+       can be given once you receive a registration number.
+
+
+
+       Section 4.4  Requirements for Blue Wave/OS2
+
+       Blue Wave/OS2  has no  special hardware requirements, other than those
+       required to  run OS/2 itself.  If you are running OS/2 v2.0 or higher,
+       this mail reader will most likely work for you.
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 15
+
+
+       Blue Wave/OS2  has all  of the  features and options available in Blue
+       Wave/DOS and  Blue Wave/386.   It  is a 32-bit text mode program which
+       can either  be run full-screen or on the OS/2 desktop.  (It is *not* a
+       Presentation Manager application.)
+
+       As with  Blue Wave/386, Blue Wave/OS2 can handle any number of message
+       areas, any  number of  messages in an area, and messages of nearly any
+       length.   The only  limit is the amount of memory that OS/2 can supply
+       to the mail reader.  (The available memory is limited to the amount of
+       actual RAM  installed on  your computer,  plus the amount of free disk
+       space available  to the  OS/2 swap  file).   As  with  the  other  two
+       versions of  the mail reader, Blue Wave/OS2 is very efficient with its
+       memory usage.  Considering this fact, and assuming available swap file
+       space of  approximately 3  megabytes, there  is  nothing  this  reader
+       *won't* load!   An  average sized mail packet probably would cause the
+       mail reader to not use any more than 300K of system memory resources.
+
+       Although Blue  Wave/DOS runs extremely well in an OS/2 DOS session, it
+       is recommended  that you  use the native OS/2 mail reader if possible.
+       There is  much less of a performance hit on other running applications
+       when using native OS/2 software.
+
+
+
+       Section 4.5  Locating Other Blue Wave Versions
+
+       All  Blue  Wave  Offline  Mail  Reader  versions  are  distributed  as
+       ShareWare.   If you would like to try a version of the mail reader but
+       cannot find  a copy locally, or you would like to make sure you obtain
+       an unaltered  distribution file, here are some alternative methods for
+       getting an evaluation copy:
+
+       *  The latest versions of our software are always available for first
+          time callers to download through our support BBS.  Our support BBS
+          phone number is +1-810-743-8464.
+
+       *  You can receive a disk directly from Cutting Edge Computing by
+          sending $5.00 (US Dollars) to our mailing address given on the
+          title page of this documentation.  Please specify 3.5" or 5.25"
+          disk size and the version(s) of the mail reader you would like.
+          You can use the file REGISTER.BW (which should have been unpacked
+          by the installation program) to submit a request for a disk, if you
+          like.
+
+       *  If you have Internet access, the latest version of the mail readers
+          are usually available for FTP on SimTel and other SimTel mirror
+          sites.  Try ftp.oak.oakland.edu in the /pub/offline directory.
+
+       *  We try to keep the latest versions of the mail reader on America
+          Online.  Use the file finder to search for "Blue Wave".
+
+
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 16
+
+       Section 4.6  Required External Programs
+
+       When you  download message  packets from a host mail system, they will
+       always be  compressed with  some type  of compression  program.    The
+       program used  to compress  these mail  packets is  sometimes called an
+       archiver.   We would  be willing to hazard a guess that 95% or more of
+       the mail  systems  online  today  support  the  use  of  a  ZIP-format
+       compatible  archiver.     It  is  suggested  that  you  obtain  a  ZIP
+       compression and  decompression program.   Without  these, you probably
+       will be unable to read messages downloaded through a host mail system.
+
+       The most  popular ZIP compression and decompression programs come from
+       the author  and creator of the ZIP archive format;  Phil Katz, founder
+       of PKWARE,  Inc.   PKZIP and PKUNZIP are distributed in the same file,
+       normally called  PKZ204G.EXE.   (At the  time this  documentation  was
+       written, v2.04g  of PKZIP/PKUNZIP  was the  latest version available).
+       PKZIP and  PKUNZIP are  ShareWare programs,  and are almost definitely
+       available from the same source you received The Blue Wave Offline Mail
+       Reader.   Blue Wave  is distributed  through BBS  systems  and  online
+       services in  the ZIP  compression format,  so it  is likely  that  you
+       already have a copy.
+
+       InfoZip is  another PKZIP  compatible archive  program.    InfoZip  is
+       released with source code, and is available for download from many BBS
+       systems.  These programs are usually named ZIP.EXE and UNZIP.EXE.  The
+       InfoZip  utilities  are  available  for  several  different  operating
+       systems including  DOS and OS/2.  (OS/2 users should get a copy of the
+       OS/2 flavor of InfoZip for use with Blue Wave/OS2).
+
+       If a  host  mail  system  provides  files  for  download  in  the  ZIP
+       compression format,  it is  likely that  they also have one or both of
+       the above  ZIP utilities.   If you cannot find a copy locally, you are
+       welcome to download the above utilities from the Blue Wave Support BBS
+       from the "Blue Wave Reader" file directory (Area #1).
+
+       The only  other required  program for  full operation of The Blue Wave
+       Offline Mail  Reader is  an ASCII  file or  text file  editor.  A very
+       simple editor is supplied with your copy of the mail reader.  TED3.COM
+       and TED3.DOC should have been unpacked to your reader directory by the
+       installation  program  if  "Unpack  Executable  (program)  files"  was
+       selected during  installation.   TED3 is supplied because of the small
+       size and  because it has been released to the public domain (no fee is
+       required for use).  TED3 is not a product of Cutting Edge Computing.
+
+       If you  already have a favorite text editor, and you would like to use
+       it to  enter messages  with the reader, you can do so by modifying the
+       Editor Command  Line in  the Setup/Configuration  menu (this  will  be
+       discussed later).   Some  excellent  text  editors  that  come  highly
+       recommended by  other users  include  BOXER,  by  David  Hamel  (Boxer
+       Software), and QEDIT by SemWare.  Another recently popular text editor
+       that was  created specifically  for use  with offline  mail readers is
+       EZQUOTE by  George Hug.   BOXER and QEDIT both are available in DOS as
+       well as OS/2 versions.  EZQUOTE was available for DOS only at the time
+       of this writing.  All are available for download from our support BBS.
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 17
+
+                                ---------------------------------------------
+                                Chapter 5:  OVERVIEW OF USING THE MAIL SYSTEM
+                                ---------------------------------------------
+
+
+       Section 5.1  Downloading and Reading Mail Packets
+
+       Before the  specific details  of installing  and using the mail reader
+       are discussed,  let's examine  the way the mail reader should be used.
+       This information  applies to  all offline  mail readers,  and  is  not
+       specifically geared  toward The  Blue Wave Offline Mail Reader.  Since
+       all offline  mail systems  operate in the same way, you may already be
+       familiar with  the procedures used to retrieve mail packets, read mail
+       packets, create  replies and  new messages, and uploading your replies
+       and new messages to the host system for processing.
+
+       Here is an outline of the steps you need to perform to retrieve a mail
+       packet from a host mail system for reading with the mail reader:
+
+            1)   Use your  communications program  to log  into your favorite
+                 BBS which  provides offline  mail capabilities.  If a system
+                 supports the  use of an offline mail system, it will usually
+                 be referred to as an "Offline Mail Door".
+
+            2)   Locate the  offline mail  packer used on the BBS.  This will
+                 usually be  an option on the Main Menu, Message System Menu,
+                 or Doors  Menu of  the BBS.   If  you are not sure where the
+                 mail door  is located, or you do not know if the BBS you are
+                 calling supports  the use  of an  offline mail  system,  you
+                 should ask  the system  operator (SysOp)  of that system for
+                 information.
+
+            3)   Use the  mail system  while you  are connected to the BBS to
+                 pack your selected messages.  Since all mail systems differ,
+                 it is  impossible to  give you  specific instructions  about
+                 this step.  You should consult with the SysOp of that BBS if
+                 you are  having problems.   If the BBS you are dialing has a
+                 Blue  Wave  Offline  Mail  Door  (written  by  Cutting  Edge
+                 Computing), you  will find  specific instructions  for using
+                 our mail  doors in  a file  called BWDOOR.DOC,  which should
+                 have been  unpacked to  your reader directory.  If this file
+                 is  not  there,  use  the  installation  program  to  unpack
+                 documentation files.
+
+            4)   Using  your  communications  program,  "download"  the  mail
+                 packet that  is generated  by the  mail door.   All  of  the
+                 messages that  were packed  by the  mail door should come to
+                 you  in   one  file.    With  many  communication  programs,
+                 initiating a  download is  often done by pressing the <PgDn>
+                 key, or  pressing <Alt-D>.   This is not universal, however.
+                 You should consult the documentation for your communications
+                 program for  full details  on downloading  files, as  a full
+                 discussion of  this  topic  is  beyond  the  scope  of  this
+                 documentation.
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 18
+
+            5)   Log off of the host mail system and exit your communications
+                 program.
+
+            6)   Load Blue  Wave and  select "Open Mail Packet" from the Main
+                 Menu.   Find the mail packet you just downloaded in the list
+                 of mail  packets that  is presented,  highlight  the  packet
+                 using the  cursor keys  on your keyboard, and press <Enter>.
+                 The mail  reader will then open up the mail packet and begin
+                 the offline mail reading process.
+
+                 **   If the packet that you just downloaded does not show up
+                      in the  Packet Manager  Window, you  need to  go to the
+                      "Setup/Configure Mail  Reader" item  on the  Main Menu,
+                      move to  the "Directories"  pull-down menu,  and change
+                      the  "Download   Directory"  so  that  it  matches  the
+                      download  directory  in  your  communications  program.
+                      Press <F1>  while editing the "Download Directory" item
+                      for full details.
+
+       At this  point you  have completed  the procedures  needed to download
+       mail packets  and read them with the mail reader.  Remember, if at any
+       time you need help when using the mail reader, press the <F1> key.
+
+
+
+       Section 5.2  Creating and Uploading Reply Packets
+
+       After you  have successfully  downloaded and read a mail packet, it is
+       possible that  you  have  generated  replies,  new  messages,  offline
+       configurations, or  file requests.  If you have done any of these, the
+       mail reader will generate what is called a "reply packet".  This reply
+       packet will be stored in the directory that you have configured in the
+       mail reader  as  the  "Upload  Directory".    The  "Upload  Directory"
+       configuration item is on the "Setup/Configure Mail Reader" menu, under
+       the "Directories" pull-down menu.
+
+       Your "Upload  Directory" should  be configured  to be  the same as the
+       upload directory in your communications program.  If you configure the
+       mail reader  in this  way, any  reply packets  generated by  the  mail
+       reader  will  immediately  be  available  while  you  are  using  your
+       communications program.
+
+       Here is  an outline  of the  steps you  need to  perform to  send  (or
+       upload) a mail packet from the mail reader's "Upload Directory" to the
+       host mail system for processing.
+
+            1)   Use your communications program to log into same system that
+                 you downloaded  the original  mail packet  from.  You cannot
+                 send a  reply packet  to a  BBS which  did  not  create  the
+                 original mail packet.
+
+            2)   Use the  same "Mail  Door" or  mail packer  option that  you
+                 downloaded the  mail packet from.  Please note that some BBS
+                 systems  have   several  different  mail  packers  available
+                 online.  It is important that you choose the correct one!
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 19
+
+
+            3)   Use the  "Upload" command  while in the mail system to begin
+                 the process  of sending  your reply  packet to the host BBS.
+                 Since all  mail systems differ, it is impossible to give you
+                 specific instructions  about this  step.  You should consult
+                 with the  SysOp of  that BBS if you are having problems.  If
+                 the BBS  you are  dialing has  a Blue Wave Offline Mail Door
+                 (written by  Cutting Edge Computing), you will find specific
+                 instructions for  using our  mail doors  in  a  file  called
+                 BWDOOR.DOC, which  should have  been unpacked to your reader
+                 directory.   If this file is not there, use the installation
+                 program to unpack the documentation files.
+
+            4)   Using your communications program, "upload" the reply packet
+                 that was  generated by the mail reader.  All of the messages
+                 that you  wrote should  have been  packed into one file with
+                 the same 'root name' as the mail packet you downloaded.  For
+                 example, if you download a mail packet through the Blue Wave
+                 Support BBS,  it will be called WILDBLUE.xxx, where 'xxx' is
+                 the  packet  extension  used  by  the  mail  door  for  that
+                 particular download  session.  In this case, the mail reader
+                 will have  generated a  file in  its "Upload Directory" with
+                 the name  of "WILDBLUE.NEW".  If the mail door you are using
+                 is a  QWK-style mail  packer (described  earlier), the  file
+                 extension will be ".REP" instead of ".NEW".
+
+                 Initiating an  upload through your communications program is
+                 often done  by pressing the <PgUp> key, or pressing <Alt-U>.
+                 This is  not universal,  however.   You should  consult  the
+                 documentation  for  your  communications  program  for  full
+                 details on  uploading files,  as a  full discussion  of this
+                 topic is beyond the scope of this documentation.
+
+                 **   If you  use  the  Zmodem  file  transfer  protocol  for
+                      downloads,  you   may  find  that  your  communications
+                      program automatically  starts  the  download  for  you.
+                      This cannot  be done with Zmodem uploads, however.  You
+                      MUST  initiate   the   file   transfer   through   your
+                      communications  program  by  pressing  the  appropriate
+                      key(s) (usually <PgUp> or <Alt-U>).
+
+            5)   Log off of the host mail system and exit your communications
+                 program.
+
+       At this  point, you have completed the steps necessary to send a reply
+       packet back  to the  host mail  system for  processing.  After doing a
+       complete mail  download and  mail upload  cycle a  few times,  it will
+       become second nature to you.  Do not get discouraged if you make a few
+       mistakes in  the process;  everyone has gone through the same learning
+       curve.
+
+
+
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 20
+
+                                      ---------------------------------------
+                                      Chapter 6:  CONFIGURING THE MAIL READER
+                                      ---------------------------------------
+
+       Section 6.1  MS-DOS CONFIG.SYS Settings
+
+       If you are using either Blue Wave/DOS or Blue Wave/386 under the MS-
+       DOS (or compatible) operating system -- either alone or with Microsoft
+       Windows -- you should make sure that the following items are set
+       properly in your CONFIG.SYS file.
+
+       CONFIG.SYS is  a system  startup configuration  file  that  is  always
+       located  in  the  root  directory  of  the  DOS  boot  drive  (usually
+       C:\CONFIG.SYS).   If you  do not  have a  CONFIG.SYS file,  it will be
+       necessary to create one.
+
+       Load CONFIG.SYS  into a  text editor  and make  sure there  is a  line
+       somewhere which reads:
+
+            FILES=25
+
+       This line  tells DOS  at boot time to allocate 25 file handles for use
+       by programs  that you  will be running on your system.  If you already
+       have a "FILES=" line in your CONFIG.SYS, and the number after it is 25
+       or higher,  there will  be no  problems.   A value higher than 25 will
+       work just  fine, but  a lower  value can  cause problems.  If the mail
+       reader attempts  to open  a file for reading or writing, and there are
+       not enough DOS file handles available, the open will fail.
+
+       The last  item to  check in  your CONFIG.SYS  file is  the  number  of
+       buffers that  you  are  allowing  DOS  to  allocate  for  faster  disk
+       accesses.   In your  CONFIG.SYS file,  you should  have  a  line  that
+       contains the following:
+
+            BUFFERS=30
+
+       This tells  DOS to  allocate enough  system memory  to  hold  30  disk
+       buffers.  This in turn allows DOS to perform disk intensive activities
+       much more  quickly than  normal.   If the  number of  buffers in  your
+       CONFIG.SYS file is already set higher than 30, that is perfectly fine.
+       If you are running a disk caching program, you can ignore this advice,
+       and follow  the instructions  that were given in the documentation for
+       your disk  caching program.   Most disk caching programs will instruct
+       you to use a very low value for the "BUFFERS=" statement in CONFIG.SYS
+       because the  cache program can use the memory in a much more efficient
+       manner than DOS does.
+
+
+       Section 6.2  Creating a Blue Wave Icon Under Windows
+
+       Users of  Microsoft Windows  v3.1x may  wish to  add an  icon to their
+       Windows desktop  that will,  when selected,  load and execute the Blue
+       Wave reader.   To  do so, follow the steps outlined below.  (Note that
+       unless otherwise indicated, to "select" something is to move the mouse
+       cursor over it and click on it.)
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 21
+
+
+       For OS/2  users, we  do NOT  recommend installing the DOS reader under
+       Win-OS/2.   Instead, we  recommend that  you install the reader to the
+       OS/2 desktop,  as described  in the next section, due to the fact that
+       Win-OS/2 does  not execute  DOS programs  in the same manner as "true"
+       Windows.
+
+       1.   Start Windows.
+
+       2.   If you  are adding  the Blue  Wave icon  to an  existing  program
+            group, skip to step 3.  Otherwise, perform the following steps to
+            create a new program group.
+
+            a.   Select File on the Program Manager menu bar, then select the
+                 New option.
+
+            b.   At the New Program Object dialog, select "Program Group" and
+                 select OK.
+
+            c.   At the  Program Group Properties dialog, enter the following
+                 information in these fields:
+
+                      Description:   Blue Wave Offline Mail Reader
+                      Group File:    BLUEWAVE.GRP
+
+                 and select OK.  The new group will now appear inside Program
+                 Manager.
+
+       3.   Make sure  the program  group in which you want to place the Blue
+            Wave icon is active.  Do this by clicking on the title bar of the
+            group dialog  box, or  if it  is minimized,  double-click on  its
+            minimized icon to bring it up.
+
+       4.   Select File  on the Program Manager menu bar, then select the New
+            option.
+
+       5.   At the  New Program  Object dialog,  select  "Program  Item"  and
+            select OK.
+
+       6.   At the  Program  Item  Properties  dialog,  enter  the  following
+            information in these fields:
+
+                 Description:        Blue Wave
+                 Command Line:       BWAVE.EXE
+                 Working Directory:  C:\BWAVE       (or path you specified
+                                                    during installation)
+
+            Do NOT select OK; instead, select Change Icon.  You will probably
+            see an error dialog box which states that no icons are available.
+            No sweat;  this is  normal.   Select OK,  and at  the Change Icon
+            dialog box, select Browse.
+
+       8.   At the  Browse dialog  box, enter  E:\BWAVE\BWAVE.ICO in the File
+            Name field  (use the  path you  specified  during  installation).
+            Select OK, then select OK at the Change Icon dialog box.
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 22
+
+
+       9.   At the  New Program Object dialog box, you should now see an icon
+            in the  lower left corner that looks like... a blue wave!  Select
+            OK.
+
+       You should  now see  an icon  in your  selected program group with the
+       name "Blue  Wave".   Double-click on  this icon, and the reader should
+       start up just as if you executed it from the DOS command line.
+
+       Note that  this procedure  can also  be used  for  the  Blue  Wave/386
+       reader.  Simply substitute "BWAVE386.EXE" for "BWAVE.EXE", and for the
+       icon title, "Blue Wave/386" for "Blue Wave".
+
+       At the  time of  this writing, we have not tested the operation of the
+       DOS reader  under Windows  NT v3.x  or Windows 95.  As such, we cannot
+       guarantee their  operation under  those operating systems; however, we
+       do not foresee any problems in this regard.
+
+
+       Section 6.3  Creating a Blue Wave Icon Under OS/2
+
+       If you  are using  IBM OS/2  v2.x or Warp v3.x, you may wish to add an
+       icon to OS/2's Workplace Shell (WPS) desktop that will, when selected,
+       load and  execute the Blue Wave reader.  The steps to install both the
+       DOS and OS/2 readers onto the WPS desktop are given below.  (Note that
+       unless otherwise indicated, to "select" something is to move the mouse
+       cursor over it and click on it.)
+
+       Note that instructions for installing the Blue Wave/386 reader are not
+       given.   This is  primarily due  to the  fact that the 386 reader is a
+       "CPU hog" (on top of the overhead generated by DOS sessions), and will
+       bog down  the rest  of your  system if you routinely multitask several
+       applications.  Also, the OS/2 reader offers the same advantages as the
+       386 reader,  without being  a CPU  hog, so there's little advantage to
+       running the 386 reader under OS/2.
+
+
+       To install the DOS reader on the OS/2 desktop:
+
+       1.   Open the  Templates folder.   Move  the cursor  over the  Program
+            template and, while holding down the right mouse button, drag the
+            template onto  the desktop.   Release the button, and the Program
+            Settings notebook will appear.
+
+       2.   Enter the following information into these fields:
+
+                 Path and File Name:      C:\BWAVE\BWAVE.EXE
+                 Working Directory:       C:\BWAVE
+
+            Note that  you should  use the  directory  you  specified  during
+            installation, if it is a directory other than C:\BWAVE.
+
+       3.   Select the  Session notebook  tab.  Decide if you wish to run the
+            reader full-screen  or in  a window,  and select  the appropriate
+            option.
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 23
+
+
+       4.   Select the General notebook tab.  In the Title field, enter "Blue
+            Wave".
+
+       5.   Close the object by double-clicking its icon in the upper left
+            corner.
+
+       You should  now see  an icon  (which looks  like a  blue wave!) on the
+       desktop with the name "Blue Wave".  Double-click on this icon, and the
+       reader should  start up  just as  if you  had executed  it from  a DOS
+       session command line.
+
+
+       To install the OS/2 reader on the OS/2 desktop:
+
+       1.   Open a windowed or full-screen OS/2 session.
+
+       2.   Change to  the directory  in which you installed the reader (i.e.
+            "CD C:\BWAVE") and start the reader by typing "BWAVE2".
+
+       3.   At the Main Menu, select the Setup/Configure Mail Reader option.
+
+       4.   At the  setup menu,  move the cursor to the Global pull-down menu
+            and select the Create WPS Desktop Icon option.
+
+       5.   When asked  if you  want to  install to  the OS/2 desktop, select
+            "Yes".
+
+       6.   Decide if  you wish to run the reader full-screen or in a window.
+            Select "Yes" to run full-screen, or "No" to run in a window.
+
+       7.   A message will display confirming that the icon has been created.
+            Exit the reader and return to the OS/2 desktop.
+
+       You should  now see  an icon  (which looks  like a  blue wave!) on the
+       desktop with  the name  "Blue Wave/2".  Double-click on this icon, and
+       the reader should start up just as if you had executed it from an OS/2
+       session command line.
+
+       An alternate  method is  to use  the same  instructions for  the  OS/2
+       reader as  was given for the DOS reader (above).  However, because the
+       OS/2 reader  has a  built-in ability to install itself to the desktop,
+       doing things the "long way" is not really necessary.
+
+
+
+       Section 6.4  Configuring and Installing External Programs
+
+       Configuring external  programs for use with The Blue Wave Offline Mail
+       Reader is perhaps the single most important aspect of getting the mail
+       reader to  work properly.   Close to 100% of the problems that you may
+       encounter  while   using  the  mail  reader  are  due  to  incorrectly
+       configured or  missing program  command lines.   This  section of  the
+       documentation --  along with  the following sub-sections -- attempt to
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 24
+
+       explain, in  great  detail,  the  proper  way  to  configure  external
+       programs for use with the mail reader.
+
+       It  is  important  to  remember  that  you  must  have  at  least  one
+       compression program,  the corresponding  decompression program,  and a
+       message editor  command line  defined in  order to  operate the reader
+       successfully.   ZIP-formatted mail  packets are  so common  that it is
+       almost  imperative   that  you   have  a   ZIP  compression   and  ZIP
+       decompression program.   (Please  see Chapter  5 for  more information
+       regarding required  external programs).   For  this reason, you should
+       read the  following section  (6.5) very  carefully if  you are  having
+       trouble getting a mail packet to open.
+
+
+
+       Section 6.4.1  The PATH Environment Variable
+
+       Throughout this  documentation, and  in many other program manuals you
+       may read, you will see references to what is called "the system PATH",
+       "the PATH environment variable", and "DOS (or OS/2) PATH".
+
+       In order  to understand the configuration of external programs in this
+       or any  other program,  it is  essential that you understand what this
+       terminology is referring to.
+
+       Each time you boot your computer, MS-DOS reads two configuration files
+       from the  root directory  of your boot drive (usually C:\).  These two
+       files are  called CONFIG.SYS  and AUTOEXEC.BAT.   The PATH environment
+       variable is  configured in  the file AUTOEXEC.BAT under MS-DOS.  (Note
+       that OS/2 uses the CONFIG.SYS file for setting the system PATH.)
+
+       If you  load the  file AUTOEXEC.BAT  into a text file editor, you will
+       probably see a line that reads:
+
+            PATH c:\;c:\dos;c:\windows
+
+       The names of the directories listed in this line may be different from
+       above.   Each directory  name is  separated by a semi-colon (;).  If a
+       program is  "located on  the system  PATH", it  simply means  that the
+       file(s) needed  to run  this program  are in  one of  the  directories
+       listed on  this line.   You  can add  new  directories  to  your  PATH
+       statement by  simply editing  this line  to include  the new directory
+       (make sure  that if  there are  any directories listed before or after
+       the new  directory entry,  that you separate them with a semi-colon!).
+       Under DOS,  the maximum  length of  this line  is 127  characters, and
+       under OS/2 the maximum length of this line is 1024 characters.
+
+       Please note that any changes you make to your CONFIG.SYS file and your
+       AUTOEXEC.BAT file  will not  become effective  until you  REBOOT  your
+       system.  They are only read by DOS and OS/2 once;  at system startup.
+
+       When DOS,  OS/2, or  any program  running under  these  two  operating
+       systems tries  to  run  a  program,  it  first  searches  the  current
+       directory to see if the program is there.  If it is there, the program
+       is run  from the  current directory.  If it is NOT there, DOS and OS/2
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 25
+
+       begin searching  the directories listed in this line.  The directories
+       are searched in the order they appear.  If, after searching the entire
+       list of  directories contained  in this  line, the  program cannot  be
+       found, DOS will issue this error message:
+
+            Bad command or file name.
+
+       The behavior  and use  of the  PATH environment  variable is described
+       here because  DOS and  OS/2 will behave in the same manner as the mail
+       reader when  it cannot  find a  program you  have told  it to  run  --
+       although the  mail reader's  error messages  are a  bit more friendly.
+       Any program  that you  try to  run through  the mail  reader  must  be
+       located on the system PATH.
+
+       The purpose  of  the  system  PATH  environment  variable  is  one  of
+       convenience.   If a  program is  located in a directory located on the
+       system path,  that program can be run from ANY directory you happen to
+       be in.   For  example, when  you  install  Windows,  it  installs  the
+       C:\WINDOWS directory  on the  system path.  No matter where you are on
+       your computer,  typing "WIN"  will start  the Windows Program Manager.
+       If you  were to  remove "C:\WINDOWS"  from the  system path and reboot
+       your  machine,   you  would  be  required  to  be  in  the  C:\WINDOWS
+       subdirectory before Windows could load.
+
+
+
+       Section 6.5  Configuring External Archivers
+
+       In order  to unpack  messages you  have downloaded  from a  host  mail
+       system,  and   to  pack  reply  packets  that  you  have  created  for
+       transmission back  to the  host system,  it is  necessary for the mail
+       reader  to   spawn  (call,  execute,  run)  external  compression  and
+       decompression  utilities.     When   this  documentation   refers   to
+       "Archivers", it  is referring  to these  compression and decompression
+       utilities.
+
+       All archivers require that specific command line parameters be used in
+       order to work properly.  Default archiver command lines are built into
+       the  mail   reader  for  all  popular  compression  and  decompression
+       programs, and should not be changed unless you are familiar with their
+       operation.   While  editing  an  archiver  command  line  through  the
+       "Setup/Configuration" menu of the mail reader, a window will appear on
+       the screen  which says  "Press <F2> to load default command line".  If
+       you have  the archiver  installed on your system, and this archiver is
+       installed in  a directory  located on  your system  PATH (see  section
+       6.4.1), the  mail reader will automatically assign the correct command
+       line for  you when you press <F2>.  You should not need to change this
+       command line.
+
+       If, after  pressing <F2>,  the mail  reader displays  an error message
+       informing you  that the  archiver cannot  be found,  you should  first
+       determine if that particular archiver is available on your system.  If
+       it is not, you will need to download it and install it before the mail
+       reader will  be able  to open  any mail packets that have been created
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 26
+
+       with this archiver.  Copy all the files needed to run this archiver to
+       a directory on your system path (see section 6.4.1)
+
+       Please note  that not  *all* archivers need to be installed to use the
+       mail reader.   Most  people will  find that they never have to install
+       anything but  ZIP, since most systems pack mail in this format.  There
+       are a  few rare  instances where  you may  need an  ARJ, LHA,  ARC, or
+       (increasingly hard to find) PAK archiver.
+
+       The AUX  compression and decompression command lines will almost never
+       be used.  If you want to learn more information about when and why the
+       AUX compression  and decompression  command lines are used, please see
+       the online  help for  the AUX  archivers by going to the SETUP menu of
+       the reader,  moving to  the "Archivers"  pull-down menu,  highlighting
+       either "AUX Compression" or "AUX Decompression", and pressing <F1>.
+
+
+
+       Section 6.5.1  Notes About Archiver Command Lines
+
+       PKZIP and  its companion program PKUNZIP are, by far, the most popular
+       ZIP compression  and decompression utilities available for MS-DOS.  If
+       you are  installing Blue Wave/DOS or Blue Wave/386, you should install
+       PKZIP.EXE and PKUNZIP.EXE in a directory on your system which contains
+       other important  system utilities.  At the time this documentation was
+       written, version  2.04g  was  the  latest  available  version  of  the
+       PKZIP/PKUNZIP utilities.
+
+       If you  are using  OS/2, you  should find  and obtain  a copy  of  the
+       InfoZip Project's  ZIP.EXE and  UNZIP.EXE for OS/2.  It is recommended
+       that you  use ZIP  v2.01 or  later, and  UNZIP v5.12  or later, due to
+       compatibility problems  with earlier  versions.    These  versions  of
+       ZIP/UNZIP are  known to  work properly under OS/2.  If you cannot find
+       these programs  locally, you  are welcome  to download  them from  our
+       Support BBS.  The OS/2 version of the mail reader can load and run DOS
+       archiver programs,  so you  can use  the MS-DOS  versions of PKZIP and
+       PKUNZIP if  necessary.   However, using  the  DOS  versions  of  these
+       compression programs is more time consuming, as OS/2 must launch a DOS
+       session in order to pack and unpack messages.
+
+
+
+       Section 6.6  Message Editor Command Line
+
+       The Blue  Wave Offline  Mail Reader  requires the  use of  an external
+       editor for  the purpose  of editing  replies and  new messages.   Blue
+       Wave/DOS and  Blue Wave/386  come packaged  with a  very simple, small
+       public domain editor called TED3 (Tiny Editor, version 3).  If you are
+       not comfortable  using this  editor, or  you prefer to use a different
+       editor for  any reason  at all, you should give the name of the editor
+       you would like to use here.
+
+       For example,  if you  have a  message editor  called EDITFILE.EXE, and
+       this program  is located  on your  system PATH  (see  section  6.4.1),
+       simply put "EDITFILE.EXE" in the message editor command line field.
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 27
+
+
+       Blue Wave  automatically passes  a file  name to  be  edited  to  your
+       message editor.   This  is done because your editor must know the name
+       of the file to edit in order to work properly with the mail reader.
+
+       If the  reader encounters  an '@F'  (without the quotes) in the editor
+       command line,  it will  replace it  with the  file name of the message
+       text to  be worked  on.   If '@F'  is not  found, the name of the file
+       automatically gets passed as the last command line parameter.
+
+       Suppose your  editor, EDITFILE.EXE,  requires a  "-w" be  typed on the
+       command line  in order  to start  up in  word wrap  mode, and the "-w"
+       command line  parameter must  come after the name of the file to edit.
+       Your message editor command line would look like this:
+
+            EDITFILE.EXE @F -w
+
+       Blue Wave/OS2  does not come with the TED3 editor, since TED3 is a DOS
+       program only.   Instead,  the mail  reader will  search for  the  OS/2
+       System Editor, E.EXE.
+
+       The message  editor command  line is  run each  time you  reply  to  a
+       message, enter  a new message, or choose to edit a message through the
+       Outbound Mail Manager.
+
+       Please note  that you cannot use a Windows application as your message
+       editor command  line.   Windows does  not allow a DOS program (such as
+       Blue Wave/DOS or Blue Wave/386) to launch a Windows application.
+
+
+
+       Section 6.7  Spell Checker Command Line
+
+       The spell  checker command line is executed only on user demand;  that
+       is, you  must actually  tell the mail reader to run this program.  You
+       can run  the spell  checker command  line after  a  message  has  been
+       entered or  replied to  (the mail  reader will present you with a menu
+       which has  "Check Spelling"  as one of the choices).  In addition, you
+       can run  the spelling  checker  from  the  Outbound  Mail  Manager  by
+       pressing <C> or selecting "Spell Checker" in the pull-down menu.
+
+       The same  rules apply for setting up the Spell Checker command line as
+       for the  Message Editor  Command Line  (see section  6.6).   The spell
+       checker command line also supports the use of the '@F' macro described
+       for the  message editor  command line.   A  spelling checker  that  is
+       commonly used  with The  Blue Wave  Offline Mail Reader is ShareSpell.
+       If you  cannot locate  a copy  of ShareSpell  on a BBS near you, it is
+       available for download through the Blue Wave Support BBS.
+
+
+
+       Section 6.8  Terminal/Comm Command Line
+
+       The reader  has a  quick and  convenient way  to access a user-defined
+       terminal (communications)  program.   From anywhere  within  the  mail
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 28
+
+       reader, you  can press  <Alt-T> to  execute the  Terminal/Comm Command
+       Line.   In addition,  you can have the reader execute the command line
+       immediately upon  startup by placing the "/TERM" switch on the command
+       line.
+
+       The same  rules for defining the terminal command line apply to all of
+       the command lines defined within the mail reader.  Please see sections
+       6.4.1 and 6.6 for more information.
+
+       **   Please note  that this  command line  does not  actually have  to
+            point to a communications program.  You can place type of program
+            you like  here, and  the reader will load it when you press <Alt-
+            T>.   You may decide that you would like to place an editor, file
+            manager program,  or reference  materials in this command line to
+            be called up at any time you are using the mail reader.
+
+            In addition,  Blue Wave/DOS  and Blue  Wave/386 cannot  launch  a
+            Windows application,  due to  a  limitation  in  Windows.    This
+            command line must point to a valid DOS program when used with the
+            /DOS and /386 mail readers.
+
+
+
+       Section 6.9  Editor/Browser Command Line
+
+       The reader  has a very simple built-in ASCII file viewer, or LIST-type
+       program which  is available  by pressing  <Alt-L> from anywhere within
+       the mail  reader.   This command line definition is supplied for those
+       who would  like a more powerful file lister, such as Vernon D. Buerg's
+       LIST.COM, to be accessible while using the mail reader.  If you do not
+       place a  command line  here, the  reader will  use its  internal  file
+       lister when <Alt-L> is used.
+
+       This command  line uses  the same  rules as  all  previously-described
+       command lines.   Please read the previous sections in this chapter for
+       more information.
+
+
+
+
+
+       Section 6.10  External Tagline Manager Command Line
+
+       The Blue  Wave Offline  Mail Reader provides support for the use of an
+       external tagline  manager/selection utility.  When you have configured
+       the mail  reader to  use an external tagline manager, the command line
+       you supply  here will be executed each time the selection of a tagline
+       is required  (if the  mail reader's  tagline selection  type is set to
+       'External' in the Preferences->Tagline Behavior Preferences section of
+       the Setup menu).
+
+       The mail reader only supports tagline managers that are "John Hancock"
+       compatible.  The John Hancock tagline selection/beautification utility
+       is a Shareware program written by Dan Moore.  If you have John Hancock
+       installed on your system, and it is located in the directory:
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 29
+
+
+            C:\BWAVE\JHANCOCK
+
+       The only thing you need to place in this command line field is:
+
+            C:\BWAVE\JHANCOCK\JH3.EXE
+
+       The reader  does not  pass any command line parameters to the external
+       tagline manager.
+
+       There are  many external  tagline managers  available on  BBS systems.
+       You can  download a  few from  our Blue Wave Support BBS, or find them
+       locally.   At any  rate, the  documentation for these tagline managers
+       must indicate  that they  are "John  Hancock-compatible", or that they
+       specifically mention  Blue Wave  as one  of the mail readers they work
+       with.
+
+       For more  information about  taglines and  how you  can customize  the
+       reader to  use taglines  and tagline files in extremely flexible ways,
+       please see  the Table  of Contents  for the proper Chapter and Section
+       dealing with "Creating Custom Tagline Files".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 30
+
+                   ----------------------------------------------------------
+                   Chapter 7:  FILES CREATED, USED, & MAINTAINED BY BLUE WAVE
+                   ----------------------------------------------------------
+
+
+       The following chapter describes the names of the files that are
+       created by the mail reader, what they are used for, and what you
+       should do if they are accidentally deleted.
+
+       Section 7.1  List of Files and their Purpose
+
+       File Name      :    BWAVEDOS.CFG
+       Version(s)     :    DOS
+       Directory      :    \BWAVE
+       Description    :    This is  the default  configuration file  used  by
+                           Blue Wave/DOS.   If  no configuration file name is
+                           given on the command line, this file will be used.
+                           If you  accidentally delete  this file,  the  mail
+                           reader will rebuild it for you.
+
+       File Name      :    BWAVEOS2.CFG
+       Version(s)     :    OS/2
+       Directory      :    \BWAVE
+       Description    :    This is  the default  configuration file  used  by
+                           Blue Wave/OS2.   If  no configuration file name is
+                           given on the command line, this file will be used.
+                           If you  accidentally delete  this file,  the  mail
+                           reader will rebuild it for you.
+
+       File Name      :    BWAVE386.CFG
+       Version(s)     :    386
+       Directory      :    \BWAVE
+       Description    :    This is  the default  configuration file  used  by
+                           Blue Wave/386.   If  no configuration file name is
+                           given on the command line, this file will be used.
+                           If you  accidentally delete  this file,  the  mail
+                           reader will rebuild it for you.
+
+       File Name      :    BWAVE386.VMC
+       Version(s)     :    386
+       Directory      :    \BWAVE
+       Description    :    This text  file contains configuration information
+                           for  controlling   the  way  DOS/4GW  operates  in
+                           conjunction  with   Blue  Wave/386.      This   is
+                           considered an 'advanced' configuration item.  More
+                           details about  this  file  can  be  found  in  the
+                           "ADVANCED CONFIGURATION  ITEMS" chapter, or in the
+                           file BWAVE386.VMC  file itself.   The  mail reader
+                           will function  just fine without this file;  it is
+                           completely optional.   It  serves not only to fine
+                           tune the memory usage of the DOS/4GW DOS Extender,
+                           but  also  to  enable  'virtual  memory  swapping"
+                           features of this mail reader.  If you accidentally
+                           delete this  file, it  can be  unpacked  from  the
+                           distribution archive by selecting "Program Files".
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 31
+
+
+       File Name      :    *.INI
+       Version(s)     :    ALL
+       Directory      :    \BWAVE\DATA
+       Description    :    All *.INI  files that  are located in the reader's
+                           DATA  directory  are  'Preferences'  configuration
+                           files.   They hold  the preferences  settings  and
+                           message filter  definitions  for  each  host  mail
+                           system.   If these  are accidentally  deleted, you
+                           will have  to rebuild them through the Preferences
+                           Menu system  in the  reader's  Setup/Configuration
+                           Menu.  The Default Preferences are stored in files
+                           called _BW_???_.INI,  where '???' is one of either
+                           DOS, 386, or OS2.
+
+       File Name      :    _BWCOLOR.CFG
+       Version(s)     :    ALL
+       Directory      :    \BWAVE\DATA
+       Description    :    This file  holds the  color configuration data for
+                           the mail  reader.   If this  file is  accidentally
+                           deleted,  the  mail  reader  will  revert  to  the
+                           default color  scheme.   You will  need to use the
+                           custom configuration  menus in the reader setup to
+                           recreate your custom color configurations.
+
+       File Name      :    PKTSTATS.BW
+       Version(s)     :    ALL
+       Directory      :    \BWAVE\DATA
+       Description    :    This file holds information about each of the mail
+                           packets that  you have  opened through  the Packet
+                           Manager  selection   window.    If  this  file  is
+                           deleted, the  mail reader will rebuild it for you.
+                           However, all  data about  the mail packets in your
+                           download directory  will be lost until you re-open
+                           them.
+
+       File Name      :    *.INF
+       Version(s)     :    ALL
+       Directory      :    \BWAVE\DATA
+       Description    :    Each time  you open  a mail  packet  from  a  host
+                           system, the information about the system is copied
+                           to a  PACKETNAME.INI file  in  the  reader's  data
+                           directory.   The main purpose of these files is to
+                           allow you  to use  the "Reply Packet Manager" menu
+                           without the need to open a mail packet from a host
+                           mail system.  The mail reader allows you to delete
+                           these files  from the  "Reply Packet Manager" host
+                           selection window.   You  can delete these files if
+                           you like;  they will be re-created when you open a
+                           mail packet from that particular host system.
+
+       File Name      :    _DEFAULT.ADR
+       Version(s)     :    ALL
+       Directory      :    \BWAVE\DATA
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 32
+
+       Description    :    This file  contains the  reader's address book and
+                           mailing lists.    If  this  file  is  accidentally
+                           deleted, you  will lose  all of  the entries  that
+                           were once in the address book.  You must re-create
+                           your address  book using  the Address  Book Editor
+                           within the  mail reader.   The address book editor
+                           is accessed  by pressing  <Ctrl-G> at any time the
+                           mail reader is loaded.
+
+
+
+       Section 7.2  Creating Keyword Search Files
+
+       One of  the most powerful aspects of The Blue Wave Offline Mail Reader
+       is its keyword searching capabilities.  Many genealogists use the mail
+       reader's keyword file searching capabilities to research family trees,
+       and  others   use  the   reader's  keyword  searching  facilities  for
+       performing routines searches on their favorite hobbies or interests.
+
+       While reading messages in the mail reader, you can search for keywords
+       manually --  that is,  you enter  a keyword on-the-spot --, or through
+       the use of a keyword search file.
+
+       Keyword searches  by file  are initiated by pressing <K> while reading
+       messages in  a message area, or by pressing <Alt-G>, <Alt-T>, or <Alt-
+       A> at  the reader's  Area Selection  Menu, followed  by  choosing  the
+       Keyword File search method.
+
+       You can  use keyword  search files  to store keywords which you search
+       for on  a regular basis.  Through the reader's Preferences system, you
+       can define  a default keyword search file globally, by message packet,
+       or by  each individual  area within a message packet.  Note that these
+       are only  the default  keyword search file that will be used;  you can
+       always manually  type the  name of  a keyword  search  file  into  the
+       dialogue box  that appears  when you  choose to perform a keyword file
+       search.
+
+       Keyword search  files need  to be  created with  an ASCII file editor,
+       such as  DOS's EDIT.COM,  OS/2's  System  Editor  (E.EXE),    or  TED3
+       (supplied with the DOS and 386 mail reader).  A keyword search file is
+       simply a  list of  keywords that  you would  like to  search for.  Any
+       number of keywords can be entered into one file.  The mail reader will
+       search for all of the keywords at one time.
+
+       A sample  keyword search  file was supplied with your mail reader.  It
+       should have  been installed  to the  main  reader  directory  (usually
+       C:\BWAVE\DEFAULT.KEY).   There are  several examples  contained within
+       this file.   Simply load DEFAULT.KEY into a text editor and edit it to
+       your heart's content.
+
+       If you  do not  have a  sample keyword  search file  by  the  name  of
+       DEFAULT.KEY  located   in  your   main  reader   directory,  use   the
+       installation program to unpack "Sample Keyword/Tagline/Welcome" files.
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 33
+
+
+       Section 7.3  Creating Tagline Files
+
+       Blue Wave's  internal tagline  manager is one of the best available in
+       an offline  mail reader.  A tagline is simply a one-line quip or quote
+       which is  attached at  the end  of any messages that you enter through
+       the mail  reader.   Taglines can  be turned off altogether through the
+       Preferences menu in the reader Setup/Configuration section.
+
+       All taglines  are stored  ASCII  text  files,  which  you  can  create
+       yourself.   A sample  tagline file  should have  been installed by the
+       installation utility  if "Sample  Keyword/Tagline/Welcome"  files  was
+       selected during  installation.   A file called DEFAULT.TAG should have
+       been placed into your main reader directory.
+
+       A tagline  file simply  consists of  a list of taglines, one per line.
+       Each line  in the  tagline selection  file that  does not begin with a
+       comment line  (a line  beginning with  a semi-colon (;)) and that does
+       not begin  with [COMMENT], [ALTLIST], or [EXTERNAL] will be considered
+       a valid tagline.
+
+       The reader  ignores all  characters past  column  70  in  the  tagline
+       selection file.   You  should keep all lines shorter than this or they
+       will be truncated when loaded by the reader.
+
+       There are several tokens that can be used inside of a tagline file for
+       complete customization.   A  complete tagline  menu system even can be
+       built through the use of Blue Wave's internal tagline manager.
+
+       The [COMMENT] Token
+       -------------------
+            The [COMMENT]  token can be used to place comments in the tagline
+            selection window.   Any  line beginning  with [COMMENT]  will  be
+            displayed as-is in the tagline selection window.  It will be non-
+            selectable as a tagline, but the reader will search for text in a
+            comment line  when using  the <Alt-S> search.  This can be useful
+            if you  want to  divide your tagline file into groups or sections
+            of related taglines.
+
+       The [EXTERNAL] Token
+       --------------------
+            Any line beginning with [EXTERNAL], when highlighted and selected
+            from the  tagline selection  window, will  cause  the  reader  to
+            execute the External Tagline Manager command line, defined in the
+            reader's Setup/Configuration  menu.   A sample tagline file entry
+            might look like this:
+
+                 [EXTERNAL]Press <Enter> here to load Tagline Manager
+
+       The [ALTLIST] Token
+       -------------------
+            The [ALTLIST]  token gives  the  tagline  selection  process  its
+            greatest power  and flexibility.    The  following  tagline  file
+            entry:
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 34
+
+                 [ALTLIST]C:\BWAVE\STARTREK.TAG
+
+            when highlighted  and selected from the tagline selection window,
+            will cause  the reader  to load  an alternate tagline file called
+            STARTREK.TAG in  your C:\BWAVE  directory.   Using these  command
+            tokens appropriately  will give  you the  power to build your own
+            tagline selection "menu tree".
+
+
+       While reading  messages, pressing  <Alt-A> or  <A> will  allow you  to
+       'adopt' (read:  steal) taglines  directly out of messages that you are
+       viewing on  the screen.  This will allow you to quickly build your own
+       tagline collection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 35
+
+                             ------------------------------------------------
+                             Chapter 8:  COMMONLY ASKED QUESTIONS AND ANSWERS
+                             ------------------------------------------------
+
+
+       This section  of the  documentation will  attempt to answer frequently
+       asked questions  about The Blue Wave Offline Mail Reader.  In addition
+       to the information provided here, the Blue Wave Support BBS will begin
+       carrying a  Frequently  Asked  Questions  file  to  be  available  for
+       download.   We intend  on keeping this file up to date with the latest
+       information and answers for problem reports.  Look for BLUEWAVE.FAQ on
+       our support BBS in file area #1 after September 1, 1995.
+
+
+       QUESTION: While I  like Blue  Wave very  much, I very much dislike the
+                 TED3 editor  that is  supplied with  it.   TED3 doesn't even
+                 have word-wrap.  Can I use another editor with Blue Wave?
+
+       ANSWER:   Yes.   You can use a full word processor like WordPerfect or
+                 WordStar as  long as  you save the messages/replies in ASCII
+                 format so the invisible printer codes, margin settings, etc.
+                 are not  embedded into  them like  in normal  WordPerfect or
+                 WordStar files.
+
+                 We recommend  something smaller, however, because for simple
+                 ASCII message  writing, these  word processors  may be over-
+                 kill.     Most  people   use  smaller   ASCII  text  editors
+                 successfully with Blue Wave.
+
+                 One of  the most popular is Qedit because of its small size;
+                 yet it  is a  full-featured ASCII  text editor.  Other folks
+                 prefer to  use Breeze,  Boxer, Sedit, or EZQuote.  There are
+                 many nice  ShareWare or  FreeWare editors  to  choose  from.
+                 Download some, test them, and choose the one you like best.
+
+                 Please see  the  section  in  this  documentation  regarding
+                 "Message Editor  Command Line",  and the online help for the
+                 Message Editor  Command  Line  for  information  on  how  to
+                 install  your   own  message  editor.    If  you  are  using
+                 WordPerfect  v5.x,   please  see  the  "KNOWN  PROBLEMS  AND
+                 INCOMPATIBILITIES" section of the documentation.
+
+
+       QUESTION: Why doesn't Blue Wave support long Internet addresses?
+
+       ANSWER:   The problem  is software  incompatibility.  The Internet was
+                 originally developed by the US Government, and then given to
+                 universities for educational purposes.  The Internet runs on
+                 software that,  by design, is incompatible with the software
+                 FidoNet and  most other  "hobbyist" networks use.  Blue Wave
+                 was designed  for FidoNet,  to FidoNet  specifications years
+                 before anyone  ever thought  the Internet  would someday  be
+                 used on  personal computers.   That's  why  there  are  UUCP
+                 gateways  in   FidoNet.    A  gateway  is  a  translator  or
+                 interpreter.   It translates  Internet messages into FidoNet
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 36
+
+                 messages, and  vice versa,  but the  incompatibility in  the
+                 address length  still  exists  due  to  differences  between
+                 software design.   Basically,  the TO:  field  in  the  mail
+                 reader cannot  be increased  any more than 35 characters (25
+                 characters for  QWK-formatted mail packets) because it would
+                 do no  good.   The host  mail systems  would not  be able to
+                 handle a  message that had more that their maximum character
+                 capability.   This is  a problem  we have to live with until
+                 the time  comes, if  ever,  when  FidoNet  can  develop  new
+                 network software and specifications.
+
+
+       QUESTION: Is there  anyway I  can get  around  the  limitation  of  25
+                 character TO: fields in QWK-style mail packets?
+
+       ANSWER:   Maybe.  Many (most?) QWK-style mail doors now support longer
+                 TO: fields  through the  use of a simple work-around.  Enter
+                 the FROM:,  and SUBJ:  fields as  normal.  In the TO: field,
+                 enter as much of the name as will fit into the editing field
+                 (25 characters).   Note  that some QWK mail doors will allow
+                 you to  leave  this  field  blank,  so  you  might  want  to
+                 experiment with this.
+
+                 Next, when you reach the message editor, enter the following
+                 text on  the FIRST  line of  the message,  and a  blank line
+                 immediately following that:
+
+                 To: someone@somewhere.very.far.away
+
+                 The above  line is indented in this documentation due to the
+                 text formatting.   The  "To: <address>" text should actually
+                 appear at  the  far  left  margin,  in  column  number  one.
+                 Remember to  leave at  least one  blank line  after this, as
+                 most mail systems will not work properly without it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 37
+
+                                     ----------------------------------------
+                                     Chapter 9:  ADVANCED CONFIGURATION ITEMS
+                                     ----------------------------------------
+
+
+       The Blue Wave Offline Mail Reader has several configuration items that
+       are intended  for the  more advanced  user.   USE EXTREME CAUTION WHEN
+       CHANGING THESE  ITEMS, as one wrong move could render your setup -- or
+       your entire system -- unusable!
+
+
+       Section 9.1  DOS Mail Reader
+
+       Due to the constraints of the MS-DOS operating system (including other
+       DOS-compatible operating  systems, such  as IBM's  PC-DOS and Novell's
+       Novell DOS),  the memory  available to  the reader  at any one time is
+       limited to  640K, minus any TSR (memory resident) programs loaded from
+       your AUTOEXEC.BAT  file, hardware or software drivers loaded from your
+       CONFIG.SYS file, and the memory that DOS itself uses.
+
+       At certain  points during  the execution  of the reader, approximately
+       400K of  memory can  be used.   The  amount of  memory required by the
+       reader varies  with the  number of message areas contained in the mail
+       packet and the number of messages contained in any one message area.
+
+       Because of  the memory  demands of the DOS reader, it may be necessary
+       to utilize  the reader's  built-in memory swapping system.  The memory
+       swapping system  can free  all but 4K of the memory used by the reader
+       when shelling  to DOS  or executing  an external program (such as text
+       editors and archive compression and decompression programs).
+
+       The memory  swapping system  is able to utilize expanded (EMS) memory,
+       extended (XMS) memory, or a disk file to temporarily hold the contents
+       of memory  while an  external program  is running.  If you have EMS or
+       XMS memory  available, it  would be to your advantage to configure the
+       reader to  use this  extra memory for quick swapping.  If neither type
+       is available,  a disk  file can be used.  The temporary swap file will
+       consume about  400K, and  will be  stored in  the directory  you  have
+       configured as the reader's Swap Directory.
+
+       To configure  the various memory swapping options, refer to the Memory
+       Swapping Options  item under  the Global setup menu.  To configure the
+       reader's swap  directory, refer to the Swap Directory option under the
+       Directories setup menu.
+
+
+       Section 9.2  386 Mail Reader
+
+       The 386  reader loads  an advanced memory manager, DOS/4GW by Rational
+       Systems (DOS4GW.EXE),  to allow it to run in protected mode and access
+       up to  16MB of  extended memory.   You  do not  need to  load the  DOS
+       HIMEM.SYS and  EMM386.EXE drivers  in order  for DOS/4GW  to  operate,
+       though DOS/4GW will work just fine with those drivers loaded (and vice
+       versa).
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 38
+
+       Normally, the  386 reader will not require more than 2MB of memory, as
+       2MB should  be more  than enough  to handle any mail packet that comes
+       your way.   However,  if you  do need  more memory,  but  your  system
+       doesn't have it, DOS/4GW can use what is called a "virtual memory swap
+       file".  Simply put, it can create a disk file that is treated as extra
+       memory.
+
+       The virtual  memory swap  file can be created by placing a file called
+       BWAVE386.VMC into the same directory that contains BWAVE386.EXE.  This
+       is a  configuration file for DOS/4GW containing instructions on how to
+       create the  swap file.   A sample BWAVE386.VMC file is included in the
+       reader's distribution  archive (it should have been placed in the main
+       reader directory during the installation procedure), and contains full
+       descriptions of  each available  option.  Use a text editor to examine
+       this file, and to make any necessary changes.
+
+
+       Section 9.3  OS/2 Mail Reader
+
+       When executing  external programs (editors, archivers, spell checkers,
+       etc.), the  OS/2 reader  will normally  spawn a  copy of  the  command
+       processor, CMD.EXE  (or 4OS2.EXE if you are using JP Software's 4OS2).
+       This allows  the OS/2  reader to use DOS and Windows programs, as well
+       as OS/2  programs.   The disadvantage  to this procedure is that it is
+       slow, since  the command processor has to be loaded in addition to the
+       program being executed.
+
+       If you  are using  native OS/2 programs (such as ZIP.EXE and UNZIP.EXE
+       from the  Info-ZIP Project),  you can  tell the  reader to  bypass the
+       command processor and execute the programs directly.  The advantage is
+       that native OS/2 programs will load instantly.
+
+       To accomplish  this, place  an exclamation point ("!") in front of the
+       defined command line.  For example:
+
+            !C:\UTIL\ZIP.EXE -jk9 "@F" "@I"
+
+       would cause the OS/2 reader to execute ZIP.EXE directly, bypassing the
+       command processor.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 39
+
+                            -------------------------------------------------
+                            Chapter 10:  KNOWN PROBLEMS AND INCOMPATIBILITIES
+                            -------------------------------------------------
+
+
+       Section 10.1  DOS Reader
+
+       PROBLEM:  If you  are using  the SmartDrive  disk cache (SMARTDRV.EXE)
+                 and have  Exploding Windows enabled, you may find the reader
+                 occasionally locking  up when attempting to open a window on
+                 the screen.
+
+       SOLUTION: Disable Exploding Windows.
+
+       PROBLEM:  If you  are using  WordPerfect v5.x  as your text editor and
+                 have memory swapping enabled, WordPerfect will complain that
+                 there are not enough file handles.
+
+       SOLUTION: Place an  "@" character  in front  of the  command line that
+                 executes WordPerfect.   This  causes the  reader to  use the
+                 command processor, COMMAND.COM (or 4DOS.COM if you are using
+                 JP Software's 4DOS), to execute WordPerfect.
+
+
+       Section 10.2  386 Reader
+
+       PROBLEM:  DOS/4GW will  not operate correctly on your system, refusing
+                 to load and execute the reader.
+
+       SOLUTION: Try eliminating  some TSR  (memory  resident)  programs  and
+                 device drivers  from your AUTOEXEC.BAT and CONFIG.SYS files,
+                 as one  or  more  of  these  may  be  interfering  with  the
+                 operation of  DOS/4GW.   (If you  are using  MS-DOS  6.0  or
+                 later, or  PC-DOS 6.1  or later,  you have a more convenient
+                 method:   Pressing the  <F5> key  after the  "Starting  DOS"
+                 message is  displayed will  completely bypass the loading of
+                 AUTOEXEC.BAT and  CONFIG.SYS, resulting  in a  "bare" system
+                 configuration.)
+
+                 If eliminating  TSRs and  device drivers  doesn't solve  the
+                 problem, you  may be  faced with  the  problem  of  hardware
+                 incompatibility.   Some systems  simply refuse  to cooperate
+                 with DOS/4GW  and other DOS extenders.  In such cases, there
+                 is very  little that can be done, other than to replace your
+                 hardware (or switch to a different version of the reader).
+
+
+       Section 10.3  OS/2 Reader
+
+       PROBLEM:  Using Artisoft's  LANtastic for OS/2 peer-to-peer networking
+                 software, the  workstation hangs  with  a  TRAP  error  when
+                 attempting to load a large file over the network.
+
+       SOLUTION: This is apparently a problem with LANtastic for OS/2.  Until
+                 this problem  can be  corrected by Artisoft, a workaround is
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 40
+
+                 to move  the file to the local workstation before attempting
+                 to load it into the reader.
+
+       PROBLEM:  If you  have configured  the reader  to  use  high-intensity
+                 background colors,  the display will show blinking text on a
+                 low-intensity background  after switching to another process
+                 (via <Alt-Esc> or <Ctrl-Esc> and back again.
+
+       SOLUTION: This problem  usually shows  up with  video cards that use a
+                 SuperVGA chipset  from S3.   Sometimes,  switching away  and
+                 back again  will put the display back to normal; most times,
+                 it won't.   Until  the S3  video drivers are fixed, the only
+                 available solution  is to  not use high-intensity background
+                 colors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 41
+
+                                    -----------------------------------------
+                                    Chapter 11:  SOFTWARE SUPPORT INFORMATION
+                                    -----------------------------------------
+
+       The Blue Wave Offline Mail System is a growing and developing software
+       package.   Cutting Edge Computing is always interested in hearing your
+       comments and  suggestions for  ways we  can Blue  Wave work better for
+       you.  We take into consideration every request that we get in order to
+       make The Blue Wave Mail System a first-class offline mail package.
+
+       If you  are having  trouble with The Blue Wave Offline Mail Reader, or
+       have comments  and suggestions,  please drop  us a  line.   We can  be
+       reached through  our support  BBS by  dialing  +1-810-743-8464.    Our
+       support BBS is online 24 hours per day, 7 days a week.
+
+       You can  reach other  users of  The Blue  Wave Offline  Mail Reader to
+       discuss problems  with the  software, discuss  time-saving techniques,
+       and other  issues related  to your  use of the mail reader through the
+       BLUEWAVE echo on the FidoNet backbone.
+
+       Limited technical  support is  provided by surface mail (letters, ink,
+       remember that?).   It is very difficult to diagnose problems through a
+       letter, however.   Please  use the  support BBS  if at  all  possible.
+       Unregistered users  of  the  mail  reader  need  to  include  a  self-
+       addressed, stamped  envelope if you would like a reply.  For inquiries
+       outside of  the United States, you must enclose an International Reply
+       Coupon (available at your local post office).
+
+       Sorry, but  voice technical  support is reserved for registered owners
+       of The  Blue Wave  Offline  Mail  Reader.    When  calling  for  voice
+       technical support,  please be  sure to  have your registration numbers
+       available.   Technical support  must verify  your registration  number
+       before assisting  you.   Technical support for the mail reader will be
+       available beginning  October 1,  1995.   The technical  support  phone
+       number is  +1-810-743-WAVE (that's  +1-810-743-9283 for  those of  you
+       without letters on your telephone).
+
+       Cutting Edge  Computing is  owned and  operated by  George Hatchew  in
+       Burton, Michigan, USA.  Here are our various addresses:
+
+       US POSTAL SERVICE
+            Cutting Edge Computing
+            P.O. Box 90476
+            Burton, Michigan  48509-0476  USA
+
+       SUPPORT BBS
+            1:2240/176          (FidoNet)
+            +1-810-743-8464     (Direct Phone Number)
+
+       INTERNET
+            bluewave@concentric.net                 (Internet E-mail)
+            http://www.concentric.net/~bluewave     (World Wide Web)
+
+       Thank you  for trying The Blue Wave Offline Mail Reader.  We hope that
+       the mail system provides you enjoyment and value for years to come!
+
+                 --------------------------------------------------
+                 The Blue Wave Offline Mail Reader, v2.30;  Page 42

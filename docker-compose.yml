@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  bluewave:
+    image: ghcr.io/rainmanh/docker-bluewave:latest
+    container_name: docker-bluewave
+    ports:
+      - "8080:8080"
+    volumes:
+      - ${BLUEWAVE_DOWN}:/root/dos/BWAVE/DOWN/
+      - ${BLUEWAVE_UPLOAD}:/root/dos/BWAVE/UPLOAD/
+    restart: unless-stopped

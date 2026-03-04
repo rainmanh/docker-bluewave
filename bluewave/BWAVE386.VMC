@@ -1,0 +1,67 @@
+!  The Blue Wave Offline Mail Reader/386, v2.30
+!  Copyright (C) 1992-1996 by Cutting Edge Computing
+!  All Rights Reserved.
+!
+!  =========================================
+!  Sample DOS4GW Virtual Memory Control File
+!  =========================================
+!
+!  DOS4GW.EXE stops processing this file at the first blank line.  Be very
+!  careful about insuring there are no blank lines in this file.  Comment
+!  lines must be preceeded by an exclamation point (!).
+!
+!  Do not modify this file unless you understand EXACTLY what you are doing.
+!  This file must be called "BWAVE386.VMC", and it must reside in the reader's
+!  home directory in order to be loaded and processed by DOS4GW.EXE.
+!
+!
+!
+!  The 'MINMEM' parameter tells DOS4GW the minimum amount of memory that is
+!  required to run BWAVE386.EXE.  You probably will not have to modify this.
+!  If you do change this, 'MINMEM' must be specified in 'K'.  The default of
+!  512K is equal to 1/2 of a megabyte.
+!
+MINMEM = 512
+!
+!  The 'MAXMEM' parameter tells DOS4GW the maximum amount of XMS/DPMI virtual
+!  memory that should be allocated.  If this parameter is not present, DOS4GW
+!  will allocate *all* available EMS memory.  Under normal conditions, Blue
+!  Wave/386 should never need more than 4MB of RAM.  As a matter of fact, you
+!  probably will never need more than 2MB of RAM.  The mail reader is very
+!  efficient with its memory usage.  The 'MAXMEM' parameter must be specified
+!  in 'K' (2048K = 2MB).
+!
+MAXMEM = 2048
+!
+!  The 'VIRTUALSIZE' parameter tells DOS4GW the total amount of RAM that
+!  should be used.  If 'VIRTUALSIZE' is greater than the amount of free RAM,
+!  or is greater than the 'MAXMEM' parameter, a swap file will be created.
+!  If you find that you are running out of memory in the 386 mail reader,
+!  try increasing this value.  2MB of memory for 99% of the users of Blue
+!  Wave/386 should be sufficient.  I seriously doubt whether anyone would
+!  ever need 4MB of virtual swap space.  However, if you are running out
+!  of memory in the 386 mail reader, it is recommended that you increase
+!  the 'MAXMEM' parameter first.  When the reader starts using the swap
+!  file, performance can be degraded.  The 'VIRTUALSIZE' parameter must
+!  be specified in 'K' (2048K = 2MB).
+!
+VIRTUALSIZE = 2048
+!
+!  The 'SWAPNAME' parameter allows you to set the directory and file name
+!  where a swap file (if needed) will be created.  If you want to move
+!  the swap file, change this parameter.  In most cases, the default location
+!  should be just fine.
+!
+SWAPNAME .\BWAVE386.SWP
+!
+!  The 'DELETESWAP' parameter, if present, tells DOS4GW that the swap file
+!  should be deleted automatically upon exit from the mail reader.  Keeping
+!  the swap file on your drive (a 'permanent swap file', if you will) can
+!  speed up the loading process.  Remove the '!' symbol if you would like
+!  the reader to use a temporary swap file.
+!
+!DELETESWAP
+!
+!
+!
+!  End of sample BWAVE386.VMC file.

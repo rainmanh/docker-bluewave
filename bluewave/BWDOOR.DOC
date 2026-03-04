@@ -1,0 +1,1737 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   The Blue Wave Offline Mail Door User Documentation, v3.10
+   Copyright (C) 1992-1996 by Cutting Edge Computing
+   All Rights Reserved.
+
+   Reference Manual for the Use and Operation
+   of The Blue Wave Mail Doors
+
+   Written by George Hatchew
+
+
+   Cutting Edge Computing
+   PO Box 90476
+   Burton, Michigan  48509-0476  USA
+
+
+
+
+                                 TABLE OF CONTENTS
+                                 -----------------
+
+       ABOUT THIS DOCUMENTATION                                   3
+       THE CONCEPT OF OFFLINE MAIL SYSTEMS                        4
+           How it All Got Started                                 4
+           Why Bother to Read Mail?                               5
+           What Will The Blue Wave Offline Mail System Do?        5
+       USING THE MAIL SYSTEM FOR THE FIRST TIME                   6
+       CHOOSING MESSAGE AREAS FOR DOWNLOAD                        7
+       THE CONFIGURATION MENU                                     9
+           Reset Lastread Pointers                               10
+           Bundle Messages From You                              10
+           Graphics (Color) On/Off                               10
+           Hotkey Menu Selections                                11
+           Extended Message Information                          11
+           Xpert Menu Mode                                       11
+           Use Numeric Packet Extensions                         12
+           New File Listings In Packets                          13
+           Protocol                                              13
+           Archiver                                              13
+           Keyword Selection                                     14
+           Filter Selection                                      14
+           Macro Definitions                                     15
+           Limit D/L Packet Size                                 15
+           Set Password Options                                  16
+           Configuration Help                                    16
+           Quit to Main Menu                                     16
+       THE MAIN MENU                                             17
+           Download New Mail                                     17
+           Upload New Replies                                    17
+           Configuration Menu                                    17
+           Quit Back to BBS                                      17
+           Goodbye                                               17
+           Xpert Mode                                            17
+       DOWNLOADING THROUGH THE BLUE WAVE MAIL DOOR               18
+           Abort Download Session                                21
+           Instant Logoff After Transfer                         21
+           Countdown Logoff                                      22
+           Protocol Change                                       22
+           [ENTER] to Begin Normal Download                      22
+       UPLOADING THROUGH THE MAIL DOOR                           23
+           File Requests                                         24
+       THE BLUE WAVE BUNDLING COMMANDS                           25
+           The 'B' Bundling Command                              27
+           The 'L' Bundling Command                              27
+           The '*' Modifier                                      28
+           The '!' Modifier                                      28
+           Bundling Command Considerations                       28
+       IN CONCLUSION                                             30
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                       Page 2
+
+
+
+
+
+                              ABOUT THIS DOCUMENTATION
+                              ------------------------
+
+       The documentation presented in this file is designed for end users and
+       clients  of   The  Blue   Wave  Offline   Mail  Door.    For  specific
+       installation, maintenance,  and execution  instructions for  The  Blue
+       Wave Offline  Mail Door,  please consult BWMAIL.DOC, which should have
+       been enclosed with your copy of the door archive.
+
+       If you  are an  end user or client of The Blue Wave Offline Mail Door,
+       you will  also need  a copy of The Blue Wave Offline Mail Reader.  The
+       Blue Wave  Offline Mail Reader should be available on the same BBS you
+       received  this   file  from.     The   file  name  as  distributed  is
+       BWnn_DOS.ZIP,  BWnn_386.ZIP,  and  BWnn_OS2.ZIP  where  'nnn'  is  the
+       current version  number.   The latest  version as  of this writing (12
+       Feb 96)  is v2.30.   Any  version of the reader claiming to be "v3.00"
+       are hacked copies of the reader and should be avoided.
+
+       This documentation  is formatted  with Form  Feeds for printing on all
+       Personal Computer  printers.   This documentation file contains no IBM
+       Extended ASCII  characters, so  it should  print fine  on all  printer
+       models - even non IBM ProPrinter compatibles.
+
+       To print this documentation in hard copy, simply execute the following
+       command from DOS:
+
+       COPY BWDOOR.USE PRN
+
+       If you  would like  to print  this documentation  using the  PRINT.COM
+       spooler enclosed  with most  versions  of  DOS,  simply  execute  this
+       command at the DOS prompt:
+
+       PRINT BWDOOR.USE
+
+       The documentation  is formatted  to 60 lines per page so that printing
+       on laser printers should also work with no problems.
+
+       The documentation  was written  by George Hatchew and is Copyright (C)
+       1992-1996 by Cutting Edge Computing.  It may be distributed freely, so
+       long as it is not modified.
+
+
+
+
+
+
+
+
+
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                       Page 3
+
+
+
+
+
+                        THE CONCEPT OF OFFLINE MAIL SYSTEMS
+                        -----------------------------------
+
+       Before we  begin the  details of  The  Blue  Wave  Offline  Mail  Door
+       operations, let's take a moment to look at the history of offline mail
+       systems.
+
+
+       How it All Got Started
+       ----------------------
+       Back in  the early  to mid  1980's, many  people were beginning to get
+       home computers and modems.  People began communicating in several ways
+       through Bulletin  Board Systems  (BBS's).   BBS systems began offering
+       message bases where people of similar interests could communicate with
+       each other  through electronic  means.   As the technology grew people
+       started sharing  message bases between different BBS system across the
+       city, across  the country,  and eventually  across the  world.    Mail
+       conferencing was born, and nothing was going to stop it.
+
+       As time  went on,  commercial online  services began  offering  E-Mail
+       which could  be transmitted to the message recipient several thousands
+       of miles  away in  a  matter  of  hours,  minutes,  or  even  seconds.
+       Eventually many  people became  hooked, many  others DEPENDANT,  on E-
+       Mail.
+
+       While the  commercial companies were developing new and better ways to
+       transmit e-mail  across the  world, so were the amateur BBS operators.
+       Several amateur  e-mail networks and technologies were formed.  One of
+       the largest  amateur e-mail  networks still  popular today is FidoNet.
+       (Don't let  the term  'amateur' fool you.  Many of the people that are
+       responsible for  keeping FidoNet  up and  running may be classified as
+       amateurs, but  several years  of experience and knowledge, and usually
+       thousands of  dollars worth  of equipment,  have earned  them  a  very
+       respectable title).
+
+       Today, FidoNet  is over 15,000 nodes strong and still growing!  As the
+       networks and the number of home computer users has grown, the need for
+       reading and  replying to  e-mail offline  has  become  more  and  more
+       essential.   When BBSing  was young,  there was plenty of time to read
+       and reply  to messages  on-line.  Today, with more users than ever and
+       more e-mail flowing than ever, there just is not enough time for every
+       user to spend a half hour, an hour, or even two hours on-line to their
+       local BBS.   Long distance phone rates can also get to be outrageously
+       expensive after just a few of these sessions per month.
+
+       This is  where offline  mail reading  comes into  play.   With today's
+       innovations in  offline mail processing, you can spend just a very few
+       minutes per day on-line to your favorite BBS system and do all of your
+       work offline,  where there  is no  time limit  to run  up against, and
+       where the phone company's meter is not running.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                       Page 4
+
+
+
+
+
+       Best of  all, you  can read  your mail  at any time you like.  Today's
+       communications software  allows you  to build  script files,  which in
+       turn allows you to retrieve your mail automatically at even the oddest
+       times of  the day  or night (especially when long distance phone rates
+       are low).   When you're ready to read your mail, all you need to do is
+       fire up your favorite offline mail system, and you are on your way!
+
+
+       Why Bother to Read Mail?
+       ------------------------
+       At this  point you  may be  asking yourself,  "Why even bother with it
+       all?".  Some people unfamiliar with mail networks and e-mail sometimes
+       cannot understand  the enjoyment  and knowledge  that can  come out of
+       being an  active participant  on an  e-mail network.  Not only can you
+       communicate with  people from  all corners  of the  world, but you can
+       learn more  about your  favorite computer software, share recipes with
+       others, learn  how to repair your leaking roof, get advice from others
+       on product  quality ratings,  or just  join in  a  chat  between  long
+       distance friends.
+
+       As a  matter of  fact, FidoNet  offers well  over  300  e-mail  topics
+       ranging from Aardvarks to Zymurgy.
+
+
+       What Will The Blue Wave Offline Mail System Do For Me?
+       ------------------------------------------------------
+       The  Blue  Wave  Offline  Mail  Reader  will  allow  you  to  actively
+       participate in  this fun and fascinating hobby to any extent you like.
+       You can  retrieve mail  from your  favorite BBS  system  to  your  own
+       computer, where  you are  free to  take your  time and enjoy yourself.
+       You aren't  forced against  the BBS  system's time  limits or the long
+       distance charges.   You  are also doing your part to allow more people
+       on your  favorite BBS  system so there are less busy signals, and more
+       productive on-line  sessions.   It is  a complete  mail manager, which
+       allows you to reply to messages, save messages to disk in a text file,
+       print messages  to your  printer, and  help you  search out  only  the
+       messages that  you are  interested  in  through  the  use  of  keyword
+       searching.  But most of all, to enjoy yourself!
+
+       In order to be the most productive with your offline mail sessions, it
+       is essential  that you have a thorough understanding of the use of The
+       Blue  Wave  Offline  Mail  Door.    The  Blue  Wave  reader  and  door
+       combination work  together to  provide you with the most efficient use
+       of your time.
+
+       This documentation  file is dedicated to helping you understand how to
+       use the ONLINE portion of the mail system;  The Blue Wave Offline Mail
+       Door.   For instructions  on using  The Blue Wave Offline Mail Reader,
+       please consult the documentation for the reader, titled BWAVE.DOC.
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                       Page 5
+
+
+
+
+
+                      USING THE MAIL SYSTEM FOR THE FIRST TIME
+                      ----------------------------------------
+
+       Before you  begin using  The Blue  Wave Offline  Mail System, you will
+       need to  download the  latest version  of The  Blue Wave  Offline Mail
+       Reader (or  a Blue  Wave door-compatible  reader  such  as  Q-Blue  or
+       WaveRider).  Please ask your sysop for the latest version, or scan the
+       BBS file system for BW???xxx.ZIP, where '???' is the version number of
+       the reader, and 'xxx' is one of 'DOS', '386', or 'OS2'.
+
+       The first  time you  enter The  Blue  Wave  Mail  Door,  you  will  be
+       presented with  a few  "welcome" and  help  screens.    The  sysop  or
+       administrator of  the online  service you are using has the ability to
+       set several system defaults for new users.
+
+       You will be presented with the ARCHIVER (compression system), PROTOCOL
+       (file transfer  system), and  possibly a  few message  areas that  the
+       sysop has  selected as default settings.  Most of the time the default
+       settings the  sysop has  chosen are the best options to use.  However,
+       you can  change these  default settings  once  you  reach  the  door's
+       CONFIGURATION menu.
+
+       After the  mail door  has shown  you the  default settings used by the
+       particular host system you are using, you are immediately taken to the
+       configuration menu  of the  door, where  you can  set several options.
+       All of the options on the configuration menu of the door are described
+       in the  section titled  "THE CONFIGURATION  MENU", found later in this
+       documentation.
+
+       The first  thing you  must do  is to select the message areas that you
+       would like to download (receive) from the host system.  You do this by
+       selecting "C)hoose  Message Areas  to Download".   The  procedure  for
+       selecting message areas is detailed in the next section.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                       Page 6
+
+
+
+
+
+                        CHOOSING MESSAGE AREAS FOR DOWNLOAD
+                        -----------------------------------
+
+       Selecting the message areas that you would like to receive or download
+       from the  host system is done by selecting "C)hoose Areas to Download"
+       from the  CONFIGURATION MENU.  Immediately after selecting this option
+       from the  menu, you are presented with a listing of message areas that
+       are available to you.
+
+       In the  left-most column  you will  find the  AREA NUMBER  (or on some
+       systems, the  "area number"  could actually  be a  word  of  up  to  9
+       characters), followed  by the current STATUS of the message area.  The
+       right-most side  of the  screen  contains  the  area's  full  name  or
+       description.   The display  on all  Blue Wave  Mail Doors  that have a
+       version number of 3.00 or higher looks similar to the following:
+
+       +--------------------------------------------------------------------+
+       | Area #  |  Status  |                 Area Description              |
+       +--------------------------------------------------------------------+
+
+           1        All        Local Message Base - User Chatter
+           2        Forced     Comments to and from the Sysop
+           3                   Role Playing Games
+           4        Persnl     FidoNet Netmail Messages
+           5        P+All      FidoNet FOR-SALE Echo
+
+       The "Status"  column tells  you how  the mail  door is going to handle
+       that message  area when  you instruct  the mail  door to download your
+       messages.   Areas with no status displayed are not active and will not
+       be included in your downloaded mail bundles.
+
+       There are 4 different types of "Status" displayed.
+
+       All    -  Indicates that you have told the mail door to download ALL
+                 NEW messages in the area each time you perform a mail
+                 download.
+
+       Persnl -  Indicates that you have told the mail door to download ONLY
+                 "Personal" messages in that area each time you perform a
+                 mail download.  Personal messages are those messages that
+                 someone has entered with your name in the TO: field.
+
+       P+All  -  Indicates that you have instructed the mail door to download
+                 ONLY messages in this area that are addressed to you, or
+                 messages that have been addressed to "All".
+
+       Forced -  Indicates that the sysop has FORCED this message area on.
+                 You will not be able to turn this area off through the mail
+                 door.  Sysops and administrators usually use FORCED message
+                 areas for important system announcements and bulletins.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                       Page 7
+
+
+
+
+
+       At the end of each screenful of message areas you are presented with a
+       prompt:  Area#(s) or More [Y,n]?
+
+       If you  would like  to change  the status  of any message areas on the
+       screen, you  simply type  in the  area number  (or name) listed in the
+       "Area #"  column of  the display.   HINT:   You can type more than one
+       area number  or name  at this  prompt.  Simply separate the areas with
+       <Space> characters  and the  mail door  will process  all of the areas
+       listed at one time.
+
+       If you  do not  want to  change the  status of any of the areas on the
+       screen, either enter "Y" to see more message areas, or "N" to stop the
+       area listing.
+
+       If you  have chosen  to change  the status  of any of the areas on the
+       screen, the door will present you with the following prompt:
+
+       Area   1:  P)ersonal msgs only, +)Personal+"All", [ENTER]All Msgs:
+
+       If you  want the  mail door  to only  bundle personal  messages in the
+       message area  shown, enter  a "P"  here.   If you want to receive your
+       personal messages, and messages addressed to "ALL", enter a "+" here.
+
+       The default  action of pressing [ENTER] will download all new messages
+       that have  been  received  into  the  message  base  since  your  last
+       successful mail download.
+
+       Simply repeat  this process until you have selected all of the message
+       areas that  you would  like to  receive in your mail packet downloads.
+       You can turn message areas OFF in the same way that you activate them.
+       Enter the  number of the message area that you would like to turn off,
+       and the  door will  present you with a prompt similar to the one shown
+       above.   The default  action of  pressing [ENTER]  will then  turn the
+       message base  off, and  you will  no longer  receive them in your mail
+       downloads.
+
+       After all message areas have been listed, you are given an opportunity
+       to QUIT  the area  selection system,  to relist  all of  the available
+       message areas,  or to  list ONLY  those areas that you have activated.
+       When you  are done  choosing your  message areas,  press ENTER at this
+       prompt, or "!" and then the ENTER key.  You will then be taken back to
+       the door's CONFIGURATION menu where you can make other changes to your
+       online configuration profile.
+
+       A complete  description of  the other  options available on the door's
+       configuration menu follows in the next section.
+
+
+
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                       Page 8
+
+
+
+
+
+                               THE CONFIGURATION MENU
+                               ----------------------
+
+       When viewing  the  door's  CONFIGURATION  menu,  it  may  seem  a  bit
+       overwhelming to  novice users.   Please do not let the menu intimidate
+       you, as  most of  the options  available here  are nothing  more  than
+       preferences that you can turn ON and OFF.
+
+       Here is  what the CONFIGURATION menu in The Blue Wave Mail Doors looks
+       like.   Please note  that a  couple of  the options are unique to mail
+       doors with a version number of 3.00 or higher.  (The version number of
+       the mail door you are using is displayed above the door's MAIN menu.)
+
+
+
+
+            +------- The Blue Wave Mail Door Configuration Menu -------+
+            |                                                          |
+            |   C)hoose Message Areas           P)rotocol  (Zmodem)    |
+            |       for Download                A)rchiver  (ZIP)       |
+            |                                                          |
+            |   R)eset Lastread Pointers        K)eyword Selection     |
+            | * B)undle Messages From You       F)ilter Selection      |
+            | * G)raphics (Color) On/Off        M)acro Definitions     |
+            | * H)otkey Menu Selections         S)et Password Options  |
+            |   E)xtended Msg Information       L)imit D/L Packet Size |
+            |   X)pert Menu Mode                                       |
+            | * U)se Numeric Pkt Extensions     ?)Configuration Help   |
+            | * N)ew File Listing in Packets    Q)uit to Main Menu     |
+            |                                                          |
+            | * Indicates Option is ON                                 |
+            +----------------------------------------------------------+
+
+
+
+
+       You will  notice that  next to  the "P)rotocol"  and "A)rchiver"  menu
+       items that  there are  words in parentheses.  The door shows you which
+       Protocol and which Archiver are active here.
+
+       The left-hand  column of  menu items  beginning with "B)undle Messages
+       From You" are all switches...  you can turn them either ON or OFF.  If
+       the option  is on,  you will  see a  symbol next  to the item.  If the
+       option is off, no symbol is shown.
+
+       We have already discussed the first item on the menu, "C)hoose Message
+       Areas for  Download", in the previous section.  We will now go through
+       the entire  configuration menu  and explain  each item individually so
+       that you have a good understanding of what each menu item does.
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                       Page 9
+
+
+
+
+
+       Reset Lastread Pointers
+       -----------------------
+       Selecting this menu item will allow you to alter the records that both
+       the BBS  and the  mail door record to disk.  These records are updated
+       each time the mail door is used to perform a successful download.  The
+       "lastread" records  store information  which tells  the software  what
+       message # was the LAST one that you have read in each message base.
+
+       Once in  a while  it is  possible for  these records  to be corrupted.
+       Sometimes, after  a successful  mail download,  you  may  accidentally
+       delete the  downloaded mail  packet or  the mail packet gets corrupted
+       during transmission.   In  any case, if you ever have a need to change
+       your message read pointers, this is where you should do it.
+
+       Because each  BBS system  stores messages  and  lastread  pointers  in
+       different ways,  the procedure to use this option also varies from one
+       door version  to another.   Explicit  instructions are  given  on  the
+       screen when  using this  option, so it should be self explanatory.  As
+       long as  you understand  the concept  of what this menu item does, you
+       should be  able to navigate the "Reset Lastread Pointers" prompts with
+       little or no difficulty.
+
+
+       Bundle Messages From You
+       ------------------------
+       This menu  item has  two different  states;   it is  either ON or OFF.
+       When "Bundle  Messages From You" is turned OFF, the mail door will not
+       pack messages  with your  name in the FROM: field into your downloaded
+       mail bundles.  If you are a very active participant in the BBS message
+       bases,  it  is  very  possible  that  turning  this  option  off  will
+       substancially decrease the size of the mail packets that you download.
+
+       When this option is turned ON, all messages that you have entered into
+       the BBS's  message base  will be  downloaded and placed into your mail
+       bundles.  When this option is on you will be able to read the messages
+       you have  entered through  the reader.   This  could also  serve as  a
+       "Confirmation" tool.   If  you receive  your own messages on your next
+       mail download, you are assured that you mail upload was successful.
+
+
+       Graphics (Color) On/Off
+       -----------------------
+       The Blue  Wave Mail  Door is  capable of sending your terminal program
+       ANSI and  AVATAR escape  sequences in  order for  you to view The Blue
+       Wave Mail  Door in full, living color.  If your communications program
+       does not  support these  escape sequences,  you will want to turn this
+       option OFF.
+
+       When this  option is  turned off,  only text  will  be  sent  to  your
+       terminal program, resulting in a "monochrome" display.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 10
+
+
+
+
+
+       Hotkey Menu Selections
+       ----------------------
+       If "Hotkey  Menu Selections"  is turned  on, the door will accept menu
+       input from  you without  having to  press [ENTER]  after each command.
+       When this  is off, you must enter your command followed by the [ENTER]
+       key.
+
+       Even when  hotkeys are  turned on,  there are some prompts in the mail
+       door that  will still  require you  to press enter.  If the door needs
+       more than one character of input at any prompt, you will need to press
+       [ENTER] in order to get the door to process your input.
+
+
+       Extended Message Information
+       ----------------------------
+       NOTE:  This menu option may or may not be available to you.  The sysop
+       or system administrator has the option of turning this menu item off.
+
+       Under normal  circumstances, you will probably NOT want to enable this
+       option, even  if it  is available to you.  Many of the e-mail networks
+       (FidoNet  especially)  use  certain  "Control"  information  which  is
+       embedded into  the message  text.  This control information is useless
+       to most  people (humans in general).  Leaving this option off, even if
+       it is  available to  you, will  greatly reduce  the size  of the  mail
+       packets that  are generated  by the  door, because all of this control
+       information will  be stripped  from the  message before  it is bundled
+       into your mail packet.
+
+       If you  are a sysop or system administrator, you are probably familiar
+       with  what  are  called  "Control-A"  or  "Kludge"  Lines  in  network
+       messages.   When this  option is on, the mail door will not strip this
+       control information  (including SEEN-BY  lines), and you can then view
+       it when reading messages through the reader.
+
+       If you  are a  general user of the mail door, and you are seeing lines
+       that start  with "Happy Face Characters" (ASCII 01), you probably have
+       this option  turned on  unintentionally.  Turning off extended message
+       information will  remove this  unwanted text from your downloaded mail
+       packets.
+
+
+       Xpert Menu Mode
+       ---------------
+       The Blue Wave Mail Door has two menu modes:  Full Help Menus and Xpert
+       Mode Menus.   When  Xpert menus  are enabled,  you will receive a very
+       short menu prompt listing the valid keys that may be pressed while the
+       mail door is processing the MAIN or the CONFIGURATION menu.
+
+       Unless you  are very familiar with the operation of The Blue Wave Mail
+       Door, it is suggested that you leave the Xpert menus turned off.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 11
+
+
+
+
+
+       Use Numeric Packet Extensions
+       -----------------------------
+       When your  sysop or  system administrator  installs The Blue Wave Mail
+       Door, they  have the  ability to  specify (up  to) an  eight character
+       "Mail Packet Name".  This mail packet name normally corresponds to the
+       name of  the BBS  System.   For example,  the name of the Cutting Edge
+       Computing support BBS is "Wild! Blue".  Our mail door is configured to
+       generate mail packets beginning with the root name "WILDBLUE".
+
+       All mail  packets downloaded  through The Blue Wave Mail Door use this
+       root name  as a  basis for  generating file names for the mail packets
+       that you  download.   Each time  you download  a mail packet, the root
+       name will remain constant, but the file extension will vary.
+
+       The default  behaviour of  the mail  door is to generate a mail packet
+       extension that  begins with  the first  two letters  of the day of the
+       week (the day the mail packet was created).  For example, "MO" is used
+       for Monday,  and "FR"  is used for Friday.  The third character of the
+       file extension  is the  number of the mail packet downloaded that day.
+       These numbers range from 1 to 9.
+
+       If today  was Thursday and you were downloading the second mail packet
+       of the  day from  the Wild  Blue BBS,  your mail packet would be named
+       WILDBLUE.TH2.
+
+       When "Use  Numeric Packet Extensions" is turned ON, the mail door will
+       create a unique 3-digit extension for your mail packet.  Each time you
+       successfully download  a mail packet, this number will be increased by
+       1.   The first  mail packet  you download  with this  option turned on
+       would  be  called  WILDBLUE.001,  the  second  mail  packet  (even  if
+       downloaded on  a different  day) would  be named WILDBLUE.002.  If you
+       reach the  point where  you download a packet called WILDBLUE.999, the
+       next mail packet created would be called WILDBLUE.001 again.
+
+       Enabling this  option has many advantages.  The first is that you will
+       never encounter  a problem  with duplicate  file names  being download
+       (which causes  many  protocols  to  go  into  convulsions).    Another
+       advantage is  that you  will be  able to  look at  a listing  of  mail
+       packets and immediately know which was the first and the last one that
+       you have downloaded.
+
+       The sysop  or admistrator  of the  host system has the ability to edit
+       the current  download extension  number through  the door's  USER FILE
+       editor.   If, for  some reason,  you need to change the number that is
+       currently stored in your user record, you may be able to ask the sysop
+       (very nicely!) to alter the current extension number.
+
+       Please note  that some  Blue Wave-compatible  mail readers  may not be
+       able to  digest the  purely numerical packet extensions.  If your mail
+       reader will not load the file properly turn this option off.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 12
+
+
+
+
+
+       New File Listings In Packets
+       ----------------------------
+       NOTE:   The sysop or administrator of your host system has the ability
+       to turn  this menu  item OFF.   Therefore,  this menu  item may not be
+       available on  some systems.   Additionally,  this feature was added to
+       mail doors with a version number of 3.00 and higher.  If the mail door
+       you are using is less than v3.00, this option will not be available.
+
+       The "New  File Listings  in Packets"  option has  3 possible settings:
+       You can  choose NOT  to receive new file listing announcements in your
+       mail packet, or you can have 2 different types of listings.
+
+       The two  possible types of listings are "COLOR" and "TEXT".  Some mail
+       readers may  not be  able to display color file listings properly (any
+       version of  The Blue Wave Offline Mail Reader above v2.10 will display
+       them properly).   When you choose to receive color file listings, ANSI
+       escape sequences will be placed into the newfiles list, resulting in a
+       nice color display on systems that have a proper viewer.  If your mail
+       reader cannot  handle ANSI  file listings,  you can turn this item ON,
+       but do not tell the door to create color lists.
+
+       This option  is very  useful when  combined with The Blue Wave Offline
+       Mail System's "file request" capabilities.  The Blue Wave Offline Mail
+       Reader (v2.11 and higher) will allow you to simultaneously display the
+       new file listing and enter file requests to the host BBS.  You can use
+       this powerful  feature to  keep updated on all of the latest utilities
+       uploaded to the host BBS.
+
+
+       Protocol
+       --------
+       Selecting this  menu item  will  allow  you  to  change  the  transfer
+       protocol used  to send  mail packets  to your  system and  to  receive
+       uploaded mail  packets from your system.  You will be presented a list
+       of available  protocols on  the system.   Simply press the letter that
+       corresponds to  the transfer  protocol you  would like to use, and the
+       door will use that protocol in all file transfers performed.
+
+
+       Archiver
+       --------
+       Selecting this  menu item  will allow  you to  change the  compression
+       system that  is used  to build your mail packets and to decompress the
+       mail packets  that you upload.  You will be presented a listing of all
+       available archivers  on the  system.   Simply press  the  letter  that
+       corresponds to the compression system you would like to use.
+
+       Please note  that you  must have  a copy of this compression system on
+       your system,  and your  reader must be properly configured to use this
+       archiver.  Consult your reader documentation for more information.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 13
+
+
+
+
+
+       Keyword Selection
+       -----------------
+       The Blue  Wave Mail  Door allows  you to  specify up  to 10  different
+       Keyword definitions.   These  keywords will  be used  during the  mail
+       scanning process  to inform  you of mail in an area which contains any
+       one of  the keyword definitions.  To get the full use out of keywords,
+       you must  use The  Blue Wave Bundling Commands, described later in the
+       documentation.  The Blue Wave Mail Door does nothing with the keywords
+       unless you  issue a  bundling command  instructing it  how  to  handle
+       keywords in certain areas.
+
+       The best  way to  describe the  use of  keywords is  with an  example.
+       Let's suppose that you are looking for Apple computer equipment to buy
+       in the  National For-Sale  FidoNet Echo.   Sometimes the FOR-SALE echo
+       generates more  than 200 messages per day.  Instead of downloading all
+       200 messages,  of which  (possibly) 199  of them are of no interest to
+       you, you may define the keyword APPLE.
+
+       You would  then be  informed during  the SCANNING  process of all mail
+       containing the  keyword APPLE.    By  using  the  Blue  Wave  Bundling
+       Commands, it  is possible  to ONLY  bundle messages  with the  Keyword
+       APPLE in  them.   This, of  course, saves  on-line time,  and time you
+       would have  to spend  paging through  the numerous (UNWANTED) messages
+       offline when  using the  reader.  Naturally, there are many other uses
+       to the  Keywords option.   The idea behind keywords is to let The Blue
+       Wave Mail Door do the work for you!
+
+
+       Filter Selection
+       ----------------
+       Like Keywords,  The Blue Wave Mail Door allows you to specify up to 10
+       FILTERS.   Filters essentially  work just  the opposite  of  Keywords.
+       During the  door's SCANNING process, you are informed of messages that
+       contain any of the Filters that you have defined.  After the mail scan
+       is complete, you can use The Blue Wave Bundling Commands to FILTER the
+       messages that you do not want to receive.
+
+       Again, the  best way  to describe the usefulness of Filters is with an
+       example.   Let's suppose  that Joe  Blow in  the FidoNet C Programming
+       Echo  is   consistently  entering   messages   which   contain   false
+       information, is  constantly flaming others, and is being an all around
+       nuisance.  Although you really enjoy reading the C_ECHO, you get tired
+       of seeing  messages entered  either from  Joe Blow or to Joe Blow.  By
+       defining the  Filter of JOE BLOW, you will be flagged if there are any
+       messages containing  the Filter.   By  using The  Blue  Wave  Bundling
+       Commands, you  can then instruct The Blue Wave Mail Door NOT to bundle
+       messages containing the Filter JOE BLOW.
+
+       Please see  the section  titled "THE  BLUE WAVE BUNDLING COMMANDS" for
+       information on how to use your keyword and filter definitions.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 14
+
+
+
+
+
+       Macro Definitions
+       -----------------
+       The Blue  Wave Mail  Door allows you to define up to 3 macros that can
+       be used  in the  place of  manually entering  your  bundling  commands
+       during each  mail download  session.   The Blue Wave Bundling commands
+       are described later in the documentation.
+
+       For each  macro that  you define, you can tell the door whether or not
+       it should  automatically be executed after a mail scan.  If you do NOT
+       set the  macro to  auto-execute, you must enter "M1", "M2", or "M3" at
+       the bundling command prompt for the macro to execute.
+
+       If the  macro is  set to auto-execute, the door will execute the macro
+       for you  at the  end of  a mail  scan.   If your  macro  contains  the
+       bundling command "!", it will force the door to not prompt you for any
+       bundling commands,  but rather  to immediately  start  packaging  your
+       mail.
+
+       If your  sysop has  set up  the system to allow "automatic downloads",
+       the auto-execute  function is  also very  handy.   During an automatic
+       download, you  are never  prompted for  input by  the door.   The door
+       performs a  mail  scan,  bundles  your  mail,  executes  the  download
+       protocol, and  exits back  to the BBS system.  Because of this, you do
+       not have  a chance  to enter  any bundling  commands, unless  they are
+       defined in a macro that is set to auto-execute.
+
+
+       Limit D/L Packet Size
+       ---------------------
+       If you  are running with limited drive space, this option is extremely
+       useful.   If you  define a  maximum packet size of 100K, the door will
+       stop bundling messages once the requested maximum packet size has been
+       reached.  The maximum packet size is the size of the UNCOMPRESSED mail
+       bundle that  the door is building.  If you enable this option, you can
+       ensure that  the downloaded  mail packet  will fit onto the disk space
+       you have available after the mail packet has been decompressed.
+
+       When this  option is  enabled,  the  door  will  perform  all  of  its
+       functions as  usual, until  it gets to the mail packing stage.  As the
+       door gathers  the mail  and places  it into  your download  packet, it
+       monitors the  packet's size  to be  sure that  it does not exceed your
+       specified size limit.
+
+       When (if)  the packet  limit size  is reached,  the mail  door sends a
+       message to  the screen  indicating this  fact, and then compresses the
+       partial mail bundle for you to download.
+
+       You can  then immediately  download another  mail packet to gather the
+       messages that  were not  packed  during  the  previous  mail  bundling
+       session.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 15
+
+
+
+
+
+       Set Password Options
+       --------------------
+       The password  or Secure option is unique to The Blue Wave Mail System.
+       Although  some   may  question   its  usefulness,  there  are  several
+       situations where  you may  wish to  enable this  feature.  There are 4
+       levels of security offered:
+
+                 * Password prompting in the DOOR only.
+                 * Password prompting in the READER only.
+                 * Password prompting in the READER and DOOR.
+                 * No password prompting (Default).
+
+       In a  situation where  you download  sensitive areas from the BBS, and
+       use The  Blue Wave  Offline Mail Reader on a machine that is shared by
+       several other  users, you  may wish  to add  the secure  option to the
+       READER only.   Each mail packet will be encrypted with a password.  If
+       a user  tries to read a packet encrypted with a password, they will be
+       prompted to  enter it.   If the user does not get the correct password
+       after three  tries, the  reader will  NOT allow  them to read the mail
+       packet.
+
+       Another situation may occur where Father downloads sensitive mail, and
+       does not wish for Daughter, Son, or Wife to read it.  It may be useful
+       to set  the secure  option in  both the  READER and  DOOR, since it is
+       possible that  the family  knows Father's  BBS password.  By prompting
+       for a password when entering the door (obviously one that is different
+       from the BBS password), he has another layer of security.
+
+
+       Configuration Help
+       ------------------
+       Displays a  help screen  which contains  very abbreviated  portions of
+       this documentation  so that  you have  a quick  reference to  the mail
+       door's functions while you are online with the BBS.
+
+
+       Quit to Main Menu
+       -----------------
+       Selecting this  option will  leave the  door's CONFIGURATION menu, and
+       return you to the door's MAIN menu.
+
+
+
+
+
+
+
+
+
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 16
+
+
+
+
+
+                                   THE MAIN MENU
+                                   -------------
+
+       Each time  you enter  The Blue  Wave Offline Mail Door, the first menu
+       you encounter  will be  the door's  MAIN menu.    From  here  you  can
+       navigate to every part of the online mail system.
+
+       Download New Mail
+       -----------------
+       Selecting this  menu option  will cause  the door  to enter  "Download
+       Mode", and  immediately begin  a new  mail scan.    Documentation  for
+       performing  mail   downloads  can  be  found  in  the  section  titled
+       "DOWNLOADING THROUGH THE BLUE WAVE MAIL DOOR".
+
+
+       Upload New Replies
+       ------------------
+       Selecting this menu option will cause the door to enter "Upload Mode",
+       and immediately  request that  you begin  uploading the  message reply
+       packet created  by The  Blue Wave Offline Mail Reader, or another Blue
+       Wave-compatible mail reader.
+
+
+       Configuration Menu
+       ------------------
+       Takes you  to the  mail door's  online configuration  menu, which  was
+       described in detail in the previous section of the documentation.
+
+
+       Quit Back to BBS
+       ----------------
+       Selecting this  menu item  will cause  you to leave The Blue Wave Mail
+       Door and return you to the BBS.
+
+
+       Goodbye
+       -------
+       NOTE:   This item  may or  may not  be available to you.  The sysop or
+       administrator has the ability to disable this menu item.
+
+       Selecting this  menu item  will cause  the mail door to disconnect you
+       from the  host BBS.   You  will no longer be connected to the BBS, and
+       you can  begin reading  the mail you downloaded with your offline mail
+       reader.
+
+       Xpert Mode
+       ----------
+       Offers a  quick way  to change  the help level you receive through the
+       menu system of the door without entering the door CONFIGURATION menu.
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 17
+
+
+
+
+
+                    DOWNLOADING THROUGH THE BLUE WAVE MAIL DOOR
+                    -------------------------------------------
+
+       After you  have configured  the mail  door to your liking and you have
+       chosen the message areas that you would like to recieve, it is time to
+       actually download the mail packet.
+
+       Immediately after  you select  D)ownload New Mail from the door's MAIN
+       menu, the  door begins  to gather  information about the BBS's message
+       base and  presents the information in tabular form.  Below is a sample
+       screen:
+
+
+
+       Logon Name: Joe Blow                                 Keyword Scan: ON
+       Alias Name: Little Joey                              Filters Scan: OFF
+       ----------------------------------------------------------------------
+           Area     Status  Total  New   Keywords  Filter  Personal  # DL'ing
+       ----------------------------------------------------------------------
+        1  GENERAL  Pers     100     7      0        0        0          0
+        2  PRIVATE  Pers     257     1      0        0        1          1
+        3  NETMAIL  New      129     0      0        0        0          0
+        4  FLINT    P+All     98    17      4        0        0         17
+       23  CFORSALE P+All    200   199     19        0        0         86
+       ----------------------------------------------------------------------
+                    Grand    784   224     23        0        1        104
+                    Totals  Total  New   Keywords  Filter  Personal  # DL'ing
+       ----------------------------------------------------------------------
+       Please enter your Blue Wave bundling commands, R to Relist Scan Table,
+       Q to abort, ? Command List, D)etailed Help or [ENTER] for ALL NEW mail
+       :
+
+
+       As you  can see from this example, there is quite a bit of information
+       presented during the mail scan.  In this example, we are downloading 5
+       message areas.   The  first 2  message areas  are being downloaded for
+       PERSONAL messages  only (notice the "Pers" under the "Status" column).
+       The NETMAIL  message area  is being  scanned for ALL new messages, and
+       the last  2 message  areas are  being scanned  for personal messages +
+       messages addressed to "All".
+
+       The "Total"  column in  the scan  table refers  to the TOTAL number of
+       messages that  the host  system has stored in those particular message
+       areas.   Since this  is a total count of the number of messages, there
+       are most  likely messages here that you have already read (if you have
+       performed a  mail download  before).   More often  than not, the TOTAL
+       column will  not contain  the same number of messages as listed in the
+       NEW column.   If the TOTAL and the NEW column contain the same number,
+       it means that you have not read any of the messages in that particular
+       message area.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 18
+
+
+
+
+
+       The numbers  in the  KEYWORDS and  FILTERS column  inform you  of  the
+       number of  messages that  contained your  defined set of words in each
+       category.   Note that the number in the KEYWORDS or the FILTERS column
+       will never  exceed the  number in  the NEW  column.  The number in the
+       KEYWORDS and  FILTERS column is the number of messages that were found
+       within the new messages on the system.
+
+       The number  in the PERSONAL column tells you how many messages in each
+       message area  were addressed  directly to  you.   Again,  this  number
+       represents the  number of personal messages within the new messages on
+       the system.
+
+       And finally,  the # DL'ING column tells you how many messages the door
+       has "queued"  for download  in each message area.  In our example, you
+       can see  that the  CFORSALE area (#23) contained 200 new messages, but
+       the door  has only  queued 86  of them  for download.  This is because
+       when the  user turned  the CFORSALE  area on through the configuration
+       menu, they  chose to only download messages in the area that contained
+       the word "All" in the TO: field, and his personal messages.  Since the
+       number in the "Personal" column is 0, we can safely assume that all 86
+       messages queued for download have been addressed to "All".
+
+       The number displayed in the "# DL'ing" column will change as you issue
+       bundling commands  to the  door to  change the number of messages that
+       will be sent from that particular message area.
+
+       While we  are discussing  the mail  scan screen,  it would probably be
+       helpful to  know all  of the  possible  phrases  that  appear  in  the
+       "STATUS" column, along with an explanation of each.
+
+       STATUS    DESCRIPTION
+       ----------------------------------------------------------------------
+       New     - Indicates that the door is going to send ALL NEW messages in
+                 the message area.
+       Pers    - Indicates that the door  will send only PERSONAL messages in
+                 the message area.
+       P+All   - Indicates that the door will send PERSONAL and  messages TO:
+                 "All" in the message area.
+       Kwds    - Indicates that you issued a K<area> bundling command for the
+                 message area, and that only KEYWORD messages will be sent.
+       Filt    - Indicates that you issued a F<area> bundling command for the
+                 message area, and the door will not send FILTERed messages.
+       L  20   - Indicates that you issued an <area#>L<#msgs> command for the
+                 message area, and only the last 20 messages will be sent.
+       B 100   - Indicates that you issued an <area#>B<#msgs> command for the
+                 message area, and only the first 100 new msgs will be sent.
+       Force   - The message area has been FORCED by the sysop and you cannot
+                 issue any bundling commands for this area.
+       None    - The message area has been deselected from downloading by the
+                 use of a -<area#> bundling command.  No msgs will be sent.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 19
+
+
+
+
+
+       After the  mail scan  has completed,  the door is stopped at a command
+       prompt, waiting  for you to give it further instructions.  The door is
+       waiting for  either a bundling command to be issued, or for one of the
+       following selections:
+
+       R       - Pressing "R[ENTER]" will cause the door to redisplay the
+                 scan table in the case that some information has scrolled
+                 off of your screen.
+
+       Q       - Pressing "Q[ENTER]" will abort the mail download.  The door
+                 will prompt you with an "Are you sure" question.  If you
+                 choose to abort the mail download, you will be taken back to
+                 the door's MAIN menu.
+
+       ?       - Pressing "?[ENTER]" will cause the door to display a list of
+                 all of the bundling commands available to you.  This is a
+                 very short display with a one-line description of the
+                 bundling commands.
+
+       D       - Pressing "D[ENTER]" will force the door to display a help
+                 screen containing a list of all bundling commands, and an
+                 example of each.  This help screen contains much more detail
+                 than the previous help screen, and is several pages long.
+
+       [ENTER] - Simply pressing [ENTER] will cause the door to begin
+                 a mail packet.  The number of messages displayed in the
+                 "# DL'ing" column will be packed for each message area.
+
+       After you  have issued  any bundling  commands or  have instructed the
+       door to  begin bundling  by simply  pressing the [ENTER] key, the mail
+       system will  immediately start  packing your  mail for  download.  You
+       will see  a status  bar appear  on the  screen, much like a bar graph,
+       that indicates the mail door's progress in the packing.
+
+       When the mail door has finished packing your mail bundle, it will then
+       scan the  host BBS's  file base  for new  files since  your last  mail
+       download (if  your sysop  allows it,  and you have told the door to do
+       so).  After a few seconds you will see the message:
+
+       Mashing your mail with <YOUR SELECTED ARCHIVER>.  One moment...
+
+       At this point in time, the host system is compressing your mail packet
+       into a  compressed mail  file for faster transmission.  On some slower
+       host systems,  this process  could take anywhere from a few seconds to
+       several minutes.   On  faster systems, this process will probably take
+       less than a minute, even on large download packets.
+
+
+
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 20
+
+
+
+
+
+       When the mail system is done compressing your mail packet, you will be
+       presented with a screen similar to the following:
+
+
+       Your mail packet is ready for download!
+
+       File Name:  WILDBLUE.001
+       File Size:  106080 bytes
+       Est. Time:  1:20 mins
+
+       A)bort Download Session
+       I)nstant logoff after transfer
+       C)ountdown before logoff
+       P)rotocol Change (YOUR PROTOCOL)
+       [ENTER] to begin normal download
+
+       Select:
+
+
+       As you can see, the information at the top of the screen tells you the
+       name of  the mail packet you will be downloading, the size of the mail
+       packet that  was created,  and an  estimated transfer time of the mail
+       packet.  The five menu selections will be described below.
+
+       Abort Download Session
+       ----------------------
+       Selecting this  option will  cause the  door to  give you  an "Are you
+       sure" prompt.  If you answer NO to the question, you will be given the
+       same screen/menu again, and you can make another selection.
+
+       If you  answer YES  (you want to abort the download session), the door
+       will ask  you the  question "Mark  the scanned messages as READ?".  If
+       you answer  YES to  this question,  the door will update your lastread
+       pointers, indicating  that you  have already  read all of the messages
+       that were  packed for  download.   If you  were to  immediately  begin
+       another download  session, the door would find 0 new messages for you.
+       Answering NO  to this  question will not update your message pointers,
+       and will return you to the door's MAIN menu.
+
+
+       Instant Logoff After Transfer
+       -----------------------------
+       NOTE:   This option  may not  be available on all systems.  Sysops and
+       administrators can disable this menu option if they wish.
+
+       Selecting this  menu option  will cause  the door to immediately begin
+       sending  you   the  mail  packet  with  the  protocol  that  you  have
+       configured.  If the download was successful, the door will then update
+       your lastread  message pointers  and then  log you  off of the system.
+       This is good for unattended download sessions.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 21
+
+
+
+
+
+       Countdown Logoff
+       ----------------
+       NOTE:   This option  may not  be available on all systems.  Sysops and
+       administrators can disable this menu option if they wish.
+
+       Selecting this  menu option  will cause  the door to immediately begin
+       sending  you   the  mail  packet  with  the  protocol  that  you  have
+       configured.  If the download was successful, the door will then update
+       yoru lastread  message pointes  and then  give you a "Countdown before
+       Logoff" screen.   The  door will  count down  for 10  seconds - if you
+       press a  key, the countdown will be aborted and you will not be logged
+       off.   If you  do not  press a  key within  10 seconds,  the door will
+       assume that  you do not wish to stay connected to the BBS, and log you
+       off of the system.
+
+
+       Protocol Change
+       ---------------
+       If you decide at the last minute that you cannot or do not wish to use
+       the protocol  that is  displayed in  parentheses, you  can select this
+       menu item.   You  will be  presented with  a  list  of  all  available
+       protocols on  the system.   Simply choose a new protocol, and you will
+       be returned  to the  menu shown  above so  that you  can make  another
+       selection.
+
+
+       [ENTER] to Begin Normal Download
+       --------------------------------
+       To begin the download of your mail packet, just press the [ENTER] key.
+       After a  successful mail download, your message lastread pointers will
+       be updated and you will be returned to the door's MAIN menu.
+
+
+       At this  point in  time, you  have completed  a mail download session.
+       That's all  there is  to it!   In  the following  session we  will  go
+       through the steps to upload reply packets, offline configurations, and
+       file requests to The Blue Wave Mail Door.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 22
+
+
+
+
+
+                          UPLOADING THROUGH THE MAIL DOOR
+                          -------------------------------
+
+       Uploading reply  packets through  The Blue  Wave Offline  Mail Door is
+       even easier  than performing  a  mail  download.    Immediately  after
+       selecting "Upload  New Replies"  from the  mail door's  MAIN menu, you
+       will be  prompted to  begin the upload of your reply packet (which has
+       been created  by The  Blue Wave  Offline Mail  Reader, or another Blue
+       Wave-compatible mail  system).   You will  use the  same file transfer
+       protocol that you have configured for downloading mail packets.
+
+       Simply start  your communications  (terminal) program  to  upload  the
+       packet created  by the reader (the reply packet will have the BBS's ID
+       as the  root name,  and a  .NEW file  extension).   If your  upload is
+       unsuccessful, the  mail door will report "Unsuccessful Upload.  Please
+       try again."   You  can then  press U from the main menu again to retry
+       your upload.
+
+       If your  upload  was  successful,  the  door  will  immediately  begin
+       unpacking the  reply bundle.   Each  message  that  you  have  entered
+       through the reader will be placed into the appropriate message area on
+       the BBS.
+
+       For each  message that is found in your reply packet, a status display
+       will be  generated on  the screen.    The  display  will  include  the
+       information found  in the  FROM: field,  the TO:  field, the  SUBJECT:
+       field, and the network address (if it is a netmail message).  The door
+       will tell  you which message number the message was saved as, and move
+       on to the next message.
+
+       It is  possible that  some kind  of error  will occur while processing
+       your uploaded  replies.  The most common "error" will be the report of
+       a "Duplicate  Message".   If you  upload the same message(s) more than
+       one time,  you will  see this reported to the screen.  This is nothing
+       to worry  about, as  the door  will not  import the duplicated message
+       into the BBS's message base.
+
+       After all  of the uploaded messages have been processed, the door will
+       then look  to see  if you  performed an OFFLINE CONFIGURATION while in
+       the reader.  If there is an offline configuration to be performed, the
+       door will do it for you at this time.
+
+       Finally, the  door will look for any files that you may have requested
+       through your  offline mail  reader.  If you did not request any files,
+       you will  be returned  to the  door's MAIN  menu,  and  you  can  then
+       continue with your online BBS session.
+
+       If you have performed a file request through your offline mail reader,
+       the door  will begin  processing your request at this point.  The next
+       section will describe the file request function in the door.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 23
+
+
+
+
+
+       File Requests
+       -------------
+       If the door has received a file request in your mail upload packet, it
+       will attempt  to process  it immediately  after processing the rest of
+       your reply  packet.   For each  file you  requested, a display will be
+       shown indicating  the file  name, the  file size,  and  the  estimated
+       transfer time  of the  file.  After all of the files have been listed,
+       the door  will generate  a total  number of files requested, the total
+       size of all files requested, and an estimated transfer time for all of
+       the files  requested.   You will  then be presented with the following
+       prompt:
+
+
+       Do you want to perform the download NOW?
+
+       Answering 'Y' will transfer the files now,
+       Answering 'N' will transfer the files with your mail download,
+       Answering 'Q' will abort this file request session.
+
+       Select:
+
+
+       Answering 'Y' or 'Q' at this prompt will perform the desired function.
+       Answering 'N'  at this  prompt will  "queue" the  files  for  download
+       during  your  mail  download  session.    In  order  for  this  to  be
+       successful, you  MUST perform  a mail  download during  the same  mail
+       session.   You cannot  exit the door, return later, and still download
+       the requested files.  Once you leave the door, the files are no longer
+       queued for you.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 24
+
+
+
+
+
+                          THE BLUE WAVE BUNDLING COMMANDS
+                          -------------------------------
+
+       Probably the  single-most powerful  feature of The Blue Wave Mail Door
+       is the  ability to  dynamically select messages for download using The
+       Blue Wave  Bundling Commands.   New  users to  the mail door often get
+       confused and  do not  understand the  use or  concept of  using  these
+       commands.   This is  unfortunate, as  this ability  is very  powerful,
+       convenient, and  can save  you massive  amounts of  online time.  And,
+       after you  understand the  concept of  the bundling  commands (and how
+       they can be used effectively), they really are very simple to use.
+
+       With the  exception of  the "B"  bundling command and the "L" bundling
+       command, all  of the  bundling commands take the same form.  The first
+       part of  the bundling  command is  the ACTION  to take  on  a  certain
+       message area,  and the second part of the command is the area in which
+       to perform  the desired  action.  Let's take it one step at a time and
+       list each  of the  bundling command  letters, and the action that they
+       perform.
+
+       SYMBOL    ACTION
+       ----------------------------------------------------------------------
+         -       Deselects a message area from the scan list.  When this
+                 command is used on an area, NO messages in the area will be
+                 packed for download.
+         +       Reselects a message area from the scan list.  When this
+                 command is used on an area, ALL NEW messages in the area
+                 will be packed for download.
+         A       Tells the door that you only want to download PERSONAL msgs,
+                 and those messages that are addressed to "All".  This action
+                 is the same as defining an area as P+ALL at the config menu.
+         B       Tells the door that you only want the BEGINNING 'n' number
+                 of messages to be downloaded from a particular message area.
+         E       Tells the door to "clean the slate" or ERASE all previous
+                 bundling commands for the area.  The area is returned to its
+                 original state before any bundling commands were issued.
+         F       Tells the door that you want to FILTER the messages in a
+                 particular message area.  Any message that contains one of
+                 your defined FILTERS will not be packed in your mail packet.
+         K       Forces the door to only send PERSONAL messages, and those
+                 messages containing any of your defined KEYWORDS.
+         L       Instructs the door to bundle only the last 'n' number of
+                 messages in a particular message area.
+         M       Instructs the door to execute Macro #'n'.  You can define
+                 bundling command macros from the door's CONFIGURATION menu.
+         P       Tells the door that you only want to get PERSONAL messages
+                 in a particular message area.
+         N       Instructs the door to NOT update lastread pointers in a
+                 particular message area.
+         U       Forces an update of the lastreads in an area (DEFAULT).
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 25
+
+
+
+
+
+       Each of  the symbols  described on  the  previous  page  requires  the
+       "second part"  of the  command to be used properly.  The "second part"
+       of the  command, as described on the previous page, is simply the area
+       number to perform the action on.
+
+       For instance,  let's take  the example  mail scan  screen that we used
+       earlier:
+
+       ----------------------------------------------------------------------
+           Area     Status  Total  New   Keywords  Filter  Personal  # DL'ing
+       ----------------------------------------------------------------------
+        1  GENERAL  Pers     100     7      0        0        0          0
+        2  PRIVATE  Pers     257     1      0        0        1          1
+        3  NETMAIL  New      129     0      0        0        0          0
+        4  FLINT    P+All     98    17      4        0        0         17
+       23  CFORSALE P+All    200   199     19        0        0         86
+       ----------------------------------------------------------------------
+                    Grand    784   224     23        0        1        104
+                    Totals  Total  New   Keywords  Filter  Personal  # DL'ing
+       ----------------------------------------------------------------------
+
+       Let's suppose  that we  are looking  for a particular item through the
+       CFORSALE echo.   Let's  say we're  looking for  FAX  machines  or  FAX
+       modems.  Therefore, we have gone to the configuration menu earlier and
+       defined the  keyword of  "FAX".   We will also assume this is the only
+       keyword that  we have  defined.   We can see from the above table that
+       the CFORSALE echo contains 19 messages that have the word FAX in them.
+
+       Since we  are running  short on  time today,  we only want to download
+       those 19  messages that  contain the  word FAX in them in the CFORSALE
+       echo, plus  the 17  messages in  FLINT and  the 1  message in PRIVATE.
+       Therefore, I could issue the door the following bundling command:
+
+       K23
+
+       The "K"  part looks  familiar.   It simply  tells the  door to perform
+       keyword-only bundling on area #23.
+
+       More than  one bundling  command can  be  issued  at  one  time,  too.
+       Suppose we  wanted the  same KEYWORD messages in area #23, but we also
+       wanted ALL  NEW messages  in area  #4, instead  of  just  Personal+All
+       messages.  We could enter the following bundling command:
+
+       K23 +4
+
+       The +  tells the  door to  remove the "P+All" status for the area, and
+       instead download  ALL NEW  messages in the area.  The K23 has the same
+       effect as  before.   As you  can see,  you can  enter as many bundling
+       commands at  the prompt as will fit.  With the flexibility of the mail
+       bundling commands, you can easily build custom mail packets.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 26
+
+
+
+
+
+       As mentioned  before, all  of the mail bundling commands take the same
+       form except  for the "L" and the "B" commands.  These commands need an
+       additional  parameter   given  to  them,  since  they  tell  the  door
+       explicitly HOW MANY messages you want to receive.
+
+       The 'B' Bundling Command
+       ------------------------
+       The 'B' bundling command takes the first 'n' number of messages in the
+       message area  AFTER your  lastread pointer.   Therefore,  when you use
+       this command,  you will  always receive  the first 'n' messages in the
+       area that you have not yet read.
+
+       Let's examine  the bundling  command "23B100".  This command instructs
+       the door  to bundle  the BEGINNING  100 messages  in area #23.  Or, to
+       rephrase it, "In area #23, I want the beginning 100 messages".  As you
+       can see, the 'B' bundling command takes the form <area#>B<#of msgs>.
+
+       When the  door updates  your lastread  pointers for  an area  that was
+       issued a 'B' bundling command, it only marks the last message that was
+       downloaded as  being read.   Any  messages that  you did  not  receive
+       because of  this command  are left  as "unread",  and you can download
+       them on a subsequent mail download.
+
+
+       The 'L' Bundling Command
+       ------------------------
+       The 'L'  bundling command is very similar to the 'B' command described
+       above.   The 'L'  command instructs  the door  to bundle  the LAST 'n'
+       number of messages in the message area.
+
+       The bundling  command "17L50"  would take the LAST 50 messages in area
+       #17 and  pack them  into your  mail download.   It tells the door, "In
+       area #17, I want only the last 50 messages".
+
+       The 'L'  bundling command  does not  care what  your lastread  message
+       pointer is  in the  area.  If the door only displays to you that there
+       are 50  NEW messages  in area #77, but there are 500 TOTAL messages in
+       area #77,  a bundling  command of  "77L500"  would  take  all  of  the
+       messages in the area and place them into your packet for downloading.
+
+       With the  special modifier,  the '*'  symbol,  you  can  download  ALL
+       messages in  an area,  regardless of  lastread pointer.   For example,
+       "56L*" would  download all  messages in  area #56.   Using the command
+       "*L*", you  would be  able to  download ALL  messages that  have  been
+       scanned in  EVERY message  area.   More information  regarding the '*'
+       modifier is given on the next page.
+
+       Whenever the  'L' bundling  command is  used, the  door  updates  your
+       lastread pointer  in the  affected areas  to the  LAST message  in the
+       message base.
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 27
+
+
+
+
+
+       The '*' Modifier
+       ----------------
+       The '*'  modifier tells the mail door to perform the desired action on
+       ALL areas that are listed on the scan table.  For instance, a bundling
+       command of "F*" would filter messages in ALL areas.  A command of "K*"
+       would download only KEYWORDS in all message areas.
+
+       The '*'  modifier is supplied to make global changes to your scan list
+       quickly and easily.  But, what if you want to perform an action on all
+       areas EXCEPT area #23?  In area #23 you want to download ALL messages,
+       but in  all of the other areas you simply want only personal messages,
+       and those messages addressed to "All".  The bundling command you would
+       issue is:
+
+       A* +23
+
+       For all  areas, the P+All status will be set, and then for area number
+       23, you  want the default action of ALL NEW messages.  If you keep and
+       open mind  and do  not let the bundling commands confuse you, they can
+       be a very powerful tool.
+
+
+       The '!' Modifier
+       ----------------
+       Normally, after  you issue  a bundling  command, the door will process
+       the command,  compute a  new download message total, and return you to
+       the prompt  for you  to enter more bundling commands.  The '!' command
+       tells the  door that you have finished entering your commands, and you
+       are ready  to begin  downloading  your  mail.    If  you  entered  the
+       following command at the prompt:
+
+       A* +23 !
+
+       The door  would not  stop to  ask you  for more input.  It understands
+       that those  are the  only bundling  commands you want to issue, and it
+       begins packing the messages immediately.
+
+
+       Bundling Command Considerations
+       -------------------------------
+       There are a few things to keep in mind about how the bundling commands
+       operate.   Understanding certain  things about  the bundling  commands
+       will make them easier to work with.
+
+       Bundling commands  are evaluated  from LEFT  to RIGHT.  If you entered
+       the command  "-23 A17  +23", you  would find that the door saw the -23
+       command first,  evaluated the A17, and then performed the +23 command.
+       Therefore, you WOULD have received all new messages in area number 23.
+
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 28
+
+
+
+
+
+       The next thing to keep in mind regarding the bundling commands is that
+       you can  only have  one 'action' being performed on an area at any one
+       time.   Unfortunately, due to a limitation of The Blue Wave Mail Door,
+       a command  of "K*  F*" would  only FILTER  messages in all areas.  You
+       cannot yet  have KEYWORDS  and FILTERS  performed on  the same message
+       area.
+
+       In a similar way, you cannot only download "P+All" messages, and still
+       have them  FILTERED.   There are  some commands  that just do not make
+       sense when  used together.   For example, it doesn't make sense to ask
+       the door  for KEYWORD  and PERSONAL  messages only  in an  area.    (A
+       P<area> and  a K<area> command).  Because the behaviour of the KEYWORD
+       action includes  bundling  PERSONAL  messages,  this  is  not  a  real
+       concern.
+
+       WARNING:  If you are already thoroughly confused, reading the next two
+       paragraphs will  do nothing  to extend  your life expectancy.  If your
+       head is  already spinning,  please  skip  reading  the  rest  of  this
+       section.   [Seriously.]   We cannot  be held  responsible for  medical
+       bills resulting from exposure to the following material.
+
+       Of course,  to every  rule there  must be an exception.  The "strange"
+       bundling command  'N' will  cause  the  door  NOT  to  update  message
+       pointers for  a particular  message area.  Offhand I can think of very
+       few uses for this action, but there have been instances where creative
+       people have  used it.   Since  the sign on my desk reads "Creativeness
+       stops here",  I can't for the life of me think of why they needed this
+       bundling command.   Anyway,  on to the exception to the rule.  You can
+       issue the  bundling command "P23 N23" to get only PERSONAL messages in
+       a message  area, *and*  to NOT  UPDATE the message read pointers.  The
+       'N' command  can be  used in  combination with  *any* of  the bundling
+       commands, except  for the 'U' bundling command (which FORCES an update
+       of the message pointers).  [Can you say "Viscious Circle"?]
+
+       If you've  *really* mucked  up your scan list with a bunch of bundling
+       commands, you  do not  have to  go to the extreme of quitting the mail
+       scan and  starting over.  Simply issue an "E*" bundling command, which
+       clears ALL  previous modifications  and lets  you get  a good  night's
+       sleep.   Another way  is to  press the  <Alt-H> key  in your  terminal
+       program, lay  back, turn  on that  soothing "Ocean  Sounds" CD  you've
+       never been  daring enough  to open,  and try again tomorrow.  The Blue
+       Wave Mail  Door will recognize that fact that you have dropped carrier
+       and exit back to the BBS so the next fool can try his or her fate.
+
+
+
+
+
+
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 29
+
+
+
+
+
+                                   IN CONCLUSION
+                                   -------------
+
+       If you  have actually  read this  far into  the documentation  without
+       falling asleep,  not only  do you  deserve one heck of a long nap, but
+       you are also eligible to receive "The Blue Wave Medal of Honour".  You
+       can receive  your special award by sending $19.95 plus $29.95 shipping
+       and handling  to the  address shown  on your  screen.  You will be the
+       envy of all your neighbors, friends, and colleagues.
+
+       On a  more serious note, it is hoped that this documentation will help
+       you understand  the full potential of The Blue Wave Offline Mail Door,
+       and help you to use the mail door effectively.  Cutting Edge Computing
+       is always  interested in  hearing your  suggestions  for  improvement.
+       Most of  the features  of the mail system have come directly from user
+       suggestions.  We hope to hear your suggestions, too.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+             ---------------------------------------------------------
+             The Blue Wave Offline Mail Door User Documentation, v3.10
+                                      Page 30
